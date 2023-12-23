@@ -45,7 +45,7 @@ function createSVG() {
     var linesCount = Math.ceil(height / 10); // Calculate number of lines based on height
     for (var i = 0; i < linesCount; i++) {
         svg.appendChild(createSinusLine(i * 10, 0, width));  // Repeat pattern across full width
-        svg.appendChild(createSinusLine(i * 10, 100, width)); // Repeat pattern across full width starting at x=100
+        svg.appendChild(createSinusLine(i * 10, -100, width)); // Repeat pattern across full width starting at x=100
     }
 
     document.getElementById("svgContainer").appendChild(svg);
