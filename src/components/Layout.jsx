@@ -3,6 +3,7 @@ import Seo from "./seo";
 import Sidebar from "./Sidebar";
 import SecurityStrip from "./SecurityStrip";
 import ethLogo from "../assets/ethereum.png";
+import Guilloche from "./Guilloche";
 
 const Layout = ({ children, showEthDiamond }) => {
   return (
@@ -10,6 +11,7 @@ const Layout = ({ children, showEthDiamond }) => {
       <div className="flex-1 flex flex-col min-h-full font-bundessans text-black max-w-[100rem] m-auto">
         <Sidebar />
         <Seo />
+        <Guilloche />
         {/* Top Right items Desktop only */}
         <div
           className={`z-10 hidden md:flex justify-end my-9 sm:mr-12 font-ocra text-black`}
