@@ -197,6 +197,7 @@ const Home = () => {
             <p>
               ETHBerlin is not a conference but a hackathon. Every attendee
               plays an active role in the event. <b>All applications are closed</b>.
+              If you did not get a ticket or want to check out other events in the week you can find them on <a href="https://blockchainweek.berlin">blockchainweek.berlin</a>.
               See you in Berlin!
             </p>
           </div>
