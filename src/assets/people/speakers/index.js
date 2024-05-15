@@ -98,14 +98,14 @@ export default [
     maskImage: require("./kat-mask.jpeg"),
     twitter: "https://twitter.com/katalunia030",
   },
-  // {
-  //   name: "Christopher Goes",
-  //   organization: {
-  //     name: "Anoma",
-  //     url: "https://anoma.io/",
-  //   },
-  //   image: require("./chris.jpeg"),
-  //   maskImage: require("./chris-mask.jpeg"),
-  //   twitter: "https://twitter.com/cwgoes",
-  // },
+  {
+    name: "Christopher Goes",
+    organization: {
+      name: "Anoma",
+      url: "https://anoma.io/",
+    },
+    image: require("./chris.jpeg"),
+    maskImage: require("./chris-mask.jpeg"),
+    twitter: "https://twitter.com/cwgoes",
+  },
 ];
