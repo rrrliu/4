@@ -1,163 +1,77 @@
-import Layout from "../components/Layout";
 import React from "react";
+import Layout from "../components/Layout";
+import ETHBerlin from "../components/ETHBerlin";
 import VenueMapModal from "../components/VenueMapModal";
 import groundFloor from "../images/groundFloor.png";
-import thirdFloor from "../images/thirdFloor.png";
-import firstFloor from "../images/firstFloor.png";
-import secondFloor from "../images/secondFloor.png";
-import fifthFloor from "../images/fifthFloor.png";
-import "../styles/rooms/fifthFloor.css";
 
-const LocationButton = ({ loc }) => {
-  return (
-    <button
-      className={`text-sm text-berlin-yellow`}
-      onClick={() => {
-        loc.handler();
-      }}
-    >
-      <span className="align-middle">
-        <span class="material-symbols-outlined text-sm mr-0.5 ml-1">
-          my_location
-        </span>
-      </span>
-      <span className="underline">{loc.name}</span>
-    </button>
-  );
-};
-
-const HackerManual = () => {
-  const [activeMapName, setActiveMapName] = React.useState("");
-  const [activeMap, setActiveMap] = React.useState("");
-  const [activeRoomClass, setActiveRoomClass] = React.useState("");
+const Hack = () => {
   const [isMapModalOpen, setIsMapModalOpen] = React.useState(false);
 
   const handleCloseModal = (e) => {
     e.stopPropagation();
     setIsMapModalOpen(false);
   };
-  const handleGroundFloor = () => {
-    setActiveMap(groundFloor);
-    setActiveMapName("Ground Floor / Floor 0");
-  };
-
-  const handleFirstFloor = () => {
-    setActiveMap(firstFloor);
-    setActiveMapName("First Floor / Floor 1");
-  };
-
-  const handleSecondFloor = () => {
-    setActiveMap(secondFloor);
-    setActiveMapName("Second Floor / Floor 2");
-  };
-
-  const handleFifthFloor = () => {
-    setActiveMap(fifthFloor);
-    setActiveMapName("Fifth Floor / Floor 5");
-  };
-
-  const locations = {
-    wildenbruch: {
-      name: "Wildenbruch",
-      handler: () => {
-        handleFifthFloor();
-        setActiveRoomClass("wildenbruch");
-        setIsMapModalOpen(true);
-      },
-    },
-    xrRoom: {
-      name: "XR Room",
-      handler: () => {
-        handleGroundFloor();
-        setActiveRoomClass("xrRoom");
-        setIsMapModalOpen(true);
-      },
-    },
-    alice: {
-      name: "Alice",
-      handler: () => {
-        handleSecondFloor();
-        setActiveRoomClass("alice");
-        setIsMapModalOpen(true);
-      },
-    },
-    persius: {
-      name: "Persius",
-      handler: () => {
-        handleFifthFloor();
-        setActiveRoomClass("persius");
-        setIsMapModalOpen(true);
-      },
-    },
-    cinema: {
-      name: "Cinema",
-      handler: () => {
-        handleFifthFloor();
-        setActiveRoomClass("cinema");
-        setIsMapModalOpen(true);
-      },
-    },
-    watergate: {
-      name: "Watergate",
-      handler: () => {
-        window
-          .open("http://water-gate.de/de/contact/contact.html", "_blank")
-          .focus();
-      },
-    },
-    yard1: {
-      name: "Yard 1",
-      handler: () => {
-        handleGroundFloor();
-        setActiveRoomClass("yard1");
-        setIsMapModalOpen(true);
-      },
-    },
-  };
 
   return (
     <Layout>
-      <h1 className="my-4 underline text-secondary">(h)acker manual</h1>
-      <div className="text-justify decorate-links">
-        <p>This section aims to help you better prepare for the hackathon.</p>
-        <div className="mb-16">
-          <h3 className="text-xl">TL;DR</h3>
+      <div className="textbox text-base decorate-links">
+        <h1 className="mb-4 font-ocra underline text-berlin-red">
+          &lt;&lt;H&lt;ACKER MANUAL
+        </h1>
+        <p>This section aims to help you to prepare for the hackathon.</p>
+        <div className="mb-8">
+          <h3 className="text-xl mt-6 font-bold">TL;DR</h3>
           <ul>
             <li>
               Join the conversation on Matrix:{" "}
               <a
-                href="https://matrix.to/#/%23ethberlin:matrix.org"
+                href="https://matrix.to/#/%23ethberlin:dod.ngo"
                 target="_blank"
+                rel="noreferrer noopener"
               >
-                #ethberlin:matrix.org
+                #ethberlin:dod.ngo
               </a>
             </li>
             <li>
-              Find a team on Github:{" "}
+              Find a team on GitHub:{" "}
               <a
                 href="https://github.com/ethb3rlin/find-a-team"
                 target="_blank"
+                rel="noreferrer noopener"
               >
                 github.com/ethb3rlin/find-a-team
               </a>
             </li>
             <li>
-              Bookmark the Mentor Helpdesk:{" "}
-              <a href="https://ask.ethberlin.ooo" target="_blank">
-                ask.ethberlin.ooo
+              Register your attendance on Zupass with your ETHBerlin04 email
+              address:{" "}
+              <a
+                href="https://zupass.org"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                zupass.org
               </a>
+            </li>
+            {/* @TO DO Link Faucets */}
+            {/* @TO DO Link Submissions */}
+            <li>
+              Visit this page frequently as we update the manual regularly.
             </li>
           </ul>
         </div>
-        <h2 className="text-2xl font-bold">Overview</h2>
+        <h2 className="text-2xl mt-8 font-bold">Overview</h2>
         <div className="mb-8">
-          <h3 className="text-xl">Before the Hackathon</h3>
+          <h3 className="text-xl mt-6">Before the Hackathon</h3>
           <ul>
             <li>
-              <a href="#travel"> Travel and Accomodation</a>
+              <a href="#travel">Travel and Accomodation</a>
             </li>
             <li>
-              <a href="#find-a-team"> Find a Team/Hacker/Idea </a>
+              <a href="#find-a-team">Find a Team/Hacker/Idea </a>
+            </li>
+            <li>
+              <a href="#zupass">Generate your Zupass PCD </a>
             </li>
             <li>
               <a href="#connect">Connect and Chat</a>
@@ -166,16 +80,16 @@ const HackerManual = () => {
               <a href="#food">Food and Drinks</a>
             </li>
           </ul>
-          <h3 className="text-xl">During the Hackathon</h3>
+          <h3 className="text-xl mt-6">During the Hackathon</h3>
           <ul>
             <li>
               <a href="#hack">Hacking and Rules</a>
             </li>
             <li>
-              <a href="#ethercards"> EtherCards with Goerli ETH </a>
+              <a href="#faucets">Faucets for Sepolia and Holesky</a>
             </li>
             <li>
-              <a href="#prizes-bounties"> Prizes and Bounties </a>
+              <a href="#prizes-bounties">Prizes and Bounties </a>
             </li>
             <li>
               <a href="#mentors">Getting Help from Mentors</a>
@@ -186,30 +100,24 @@ const HackerManual = () => {
             <li>
               <a href="#judging">Judging</a>
             </li>
-            <li>
-              <a href="#experiences">Experiences</a>
-            </li>
           </ul>
-          <h3 className="text-xl">After the Hackathon</h3>
+          <h3 className="text-xl mt-6">After the Hackathon</h3>
           <ul>
             <li>
-              <a href="#afterparty">Afterparty</a>
+              <a href="#voting">Voting</a>
             </li>
           </ul>
         </div>
-        <div className="flex justify-center">
-          <div className="border-b-[1px] mb-8 mt-8 border-berlin-yellow opacity-40 w-full"></div>
-        </div>
-        <div id="travel" className="mt-8">
-          <h2 className="text-2xl font-bold font-bold">
-            Travel and Accommodation
-          </h2>
-          <h3 className="text-xl">Travel to Berlin</h3>
+        <div className="flex justify-center"></div>
+        <div id="travel">
+          <h2 className="text-2xl mt-8 font-bold">Before the Hackathon</h2>
+          <h3 className="text-xl mt-6 mt-4">Travel and Accommodation</h3>
+          <h4 className="text-l mt-4 font-bold">Travel to Berlin</h4>
           <p>
             Berlin has one airport called Berlin Brandenburg Airport "Willy
             Brandt" (BER) and is well connected with railway. You can take a
-            train from European cities such as Amsterdam and Paris to travel
-            with the convenience of comfortable high-speed trains with internet
+            train from European cities such as Stockholm or Paris to travel with
+            the convenience of comfortable high-speed trains with internet
             access, avoid the long security lines, missing luggages, and
             decrease your CO2 footprint. Check the{" "}
             <a
@@ -221,51 +129,105 @@ const HackerManual = () => {
             </a>{" "}
             website for routes.
           </p>
-          <h3 className="text-xl">Urban Transport</h3>
+          <h4 className="text-l mt-4 font-bold">Urban Transport</h4>
           <p>
             Berlin is a bike friendly city. Most of the times the quickest and
             easiest way to getting from A to B is by bike. If you are staying
             longer than just a few days, you might want to consider renting a
-            bike from <a href="https://swapfiets.de/en-DE/berlin">Swapfiets</a>.
-            You will also find many scooters and bikes that you can grab around
-            the city.
+            bike from{" "}
+            <a
+              href="https://swapfiets.de/en-DE/berlin"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              Swapfiets
+            </a>{" "}
+            or buying daily/monthly subscription from{" "}
+            <a
+              href="https://www.nextbike.de/en/#tariffs"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              nextbike
+            </a>{" "}
+            (bike sharing). You will also find many scooters and bikes that you
+            can grab around the city. On the{" "}
+            <a
+              href="https://www.jelbi.de/en/home/"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              Jelbi App
+            </a>{" "}
+            you can conveniently find the public transportation tickets and info
+            as well as carsharing, scooters, bikes etc.
           </p>
+          <h4 className="text-l mt-4 font-bold">Accomodation</h4>
+
           <p>
-            On the <a href="https://www.jelbi.de/en/home/">Jelbi App</a> you can
-            conveniently find the public transportation tickets and info as well
-            as carsharing, scooters, bikes etc.
+            Finding a hotel or other affordable accommodation in Berlin can be
+            quite a challenge in itself. Since this year's ETHBerlin is
+            coinciding with the{" "}
+            <a
+              href="https://olympiastadion.berlin/en/term/dfb-pokal-final-2024/"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              German Cup Final
+            </a>{" "}
+            and the{" "}
+            <a
+              href="https://www.euroleaguebasketball.net/euroleague/final-four/"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              Euroleague Final Four
+            </a>
+            , it can be particularly difficult to find a place. We recommend you
+            to look for a suitable shelter as soon as you receive your hacker
+            confirmation! If you haven't booked anything yet, best do so asap.
           </p>
-          <h3 className="text-xl">Accomodation</h3>
+
           <p>
-            The hackathon has a nap room where you can rest, but not make it
-            your home. Beanbags are provided, but sleeping bags are not allowed.
-            If you want a good sleep, then you need to find somewhere else.
-          </p>
-          <p>
-            Join the couchsurfing chat if you are offering or looking for a
-            couch:{" "}
-            <a href="https://matrix.to/#/#couchsurfing:tchncs.de">
+            Aside from hotels and Airbnbs, you can check offers on local options
+            like{" "}
+            <a
+              href="https://www.wg-gesucht.de/en/"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              WG-Gesucht
+            </a>{" "}
+            and Facebook groups or post your own requests post there. However,
+            please be wary of the risks and potential scams. Join our{" "}
+            <a
+              href="https://matrix.to/#/%23eb4-couches:dod.ngo"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
               #couchsurfing
             </a>{" "}
-            (Matrix)
+            chat and fill in the{" "}
+            <a
+              href="https://office.ethberlin.org/sheet/#/2/sheet/edit/NYEjPNvPzIxa0k5mcXTCZUrH/"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              coordination sheet
+            </a>{" "}
+            if you are offering or looking for a place to sleep.
           </p>
+
           <p>
-            Aside from hotels and AirBnbs, you can try to find someone in Berlin
-            renting out temporarily for cheaper options. You can check{" "}
-            <a href="https://www.wg-gesucht.de/en/">WG-Gesucht</a> and Facebook
-            groups for offers and can place your own request post there.
-            However, please be wary of the risks and potential scams.
-          </p>
-          <p>
-            We recommend the districts Treptow, Kreuzberg, Neuk&ouml;lln, or
-            Friedrichshain due to their proximity to the venue.
+            Our venue is open 24/2 and welcomes hacking through the night. There
+            are many cozy corners with sofas, beanbags etc. However, we still
+            would recommend to look for a place to leave your stuff, sleep, and
+            take a shower.
           </p>
         </div>
-        <div className="flex justify-center">
-          <div className="border-b-[1px] mb-8 mt-4 border-berlin-yellow opacity-40 w-full"></div>
-        </div>
+        <div className="flex justify-center"></div>
         <div id="find-a-team">
-          <h2 className="text-2xl font-bold">Find a Team/Hacker/Idea</h2>
+          <h3 className="text-xl mt-6 font-bold">Find a Team/Hacker/Idea</h3>
           <p>
             Are you missing a team, a hacker, an idea? Or you have an idea that
             can be implemented during the hackathon? Find a match on{" "}
@@ -280,70 +242,94 @@ const HackerManual = () => {
             ceremony.
           </p>
         </div>
-        <div className="flex justify-center">
-          <div className="border-b-[1px] mb-8 mt-4 border-berlin-yellow opacity-40 w-full"></div>
+        <div className="flex justify-center"></div>
+        <div id="zupass">
+          <h3 className="text-xl mt-6 font-bold">Generate your Zupass PCD</h3>
+          <p>
+            This year, we have a PCD (proof-carrying data) integration with
+            Zupass for ETHBerlin04. You can prove your attendance to the
+            hackathon by generating a zero-knowledge proof through the Zupass
+            web application.
+          </p>
+          <p>
+            Visit{" "}
+            <a
+              href="https://zupass.org"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              zupass.org
+            </a>{" "}
+            and sign up (or log in) with the same email address you used to
+            register for the hackathon. You will find an active ETHBerlin04
+            subscription in your account.
+          </p>
+          <p>
+            You will require this PCD for the faucets (if needed) and the final
+            submission of your hackathon project as well as voting on other
+            people's projects after the hackathon concluded.
+          </p>
         </div>
         <div id="connect">
-          <h2 className="text-2xl font-bold">Connect and Chat</h2>
+          <h3 className="text-xl mt-6 font-bold">Connect and Chat</h3>
           <p>
             The only official communication channel is the ETHBerlin Matrix
             space. Use it to connect with hackers and mentors, and to get
             updates from the organizers throughout the hackathon:{" "}
-            <a href="https://matrix.to/#/%23ethberlin:matrix.org">
-              #ethberlin:matrix.org
+            <a
+              href="https://matrix.to/#/%23ethberlin:dod.ngo"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              #ethberlin:dod.ngo
             </a>
           </p>
+          <p>There is no Discord or Telegram.</p>
         </div>
-        <div className="flex justify-center">
-          <div className="border-b-[1px] mb-8 mt-4 border-berlin-yellow opacity-40 w-full"></div>
-        </div>
+        <div className="flex justify-center"></div>
         <div id="food">
-          <h2 className="text-2xl font-bold">Food and Drinks</h2>
+          <h3 className="text-xl mt-6 font-bold">Food and Drinks</h3>
           <p>
-            ETHBerlin will cover all meals and drinks for the entire Hackathon,
-            and conference coffee breaks. There will be vegan and vegetarian
-            options provided. Just come with an open mind, a knowledge-thirsty
-            brain and enthusiasm. Meal and snack times will be on the{" "}
-            <a href="/program">program</a>.
+            As per usual, this one is on us! ETHBerlin will cover all meals and
+            drinks for the entire hackathon! This includes breakfasts, lunches,
+            dinners, and midnight snacks as well as various soft drinks, mate
+            (of course!), water, coffee and beer. In addition to{" "}
+            <em>regular</em> food, there will be vegan and vegetarian options
+            provided. Just come with an open mind, a knowledge-thirsty brain and
+            enthusiasm. Meal and snack times will be on the program.
           </p>
-        </div>
-        <div className="flex justify-center">
-          <div className="border-b-[1px] mb-8 mt-4 border-berlin-yellow opacity-40 w-full"></div>
         </div>
         <div id="hack">
-          <h2 className="text-2xl font-bold">Hacking and Rules</h2>
-          <p>
-            Hacker teams are made up of maximum of 5 people. You can find some
-            rules and resources useful while you are hacking here.
-          </p>
-          <h3 className="text-xl">Hacking Rules</h3>
+          <h2 className="text-2xl mt-8 font-bold">During the Hackathon</h2>
+          <h3 className="text-xl mt-6 font-bold">Hacking and Rules</h3>
+          <p>Read the fine manual or regret it later.</p>
+          <h4 className="text-l mt-4 font-bold">Hacking Rules</h4>
           <ul>
+            <li>A team can not be more than five people.</li>
             <li>
-              You must be at ETHBerlin to work on a project for submission
-            </li>
-            <li>
-              Your hack must be related to decentralization, cryptography, or
-              privacy
+              You must be present at the ETHBerlin venue for your project to be
+              eligible for submission.
             </li>
             <li>
               You can plan ahead of time, but all code for your project has to
-              be written during the event
+              be written during the event. Code can only be committed after
+              hacking officially starts and only until the submission deadline.
             </li>
-            <li>You cannot use another team's source code</li>
+            <li>You cannot use another team's source code.</li>
             <li>
-              The decision of judges is final for determining prizes and awards
-            </li>
-            <li>
-              Please comply with all instructions from ETHBerlin organizers
+              The decision of judges is final for determining prizes and awards.
             </li>
             <li>
-              Please respect our <a href="/code-of-conduct">Code of Conduct</a>!
+              Breaking our <a href="/code-of-conduct">Code of Conduct</a> leads
+              to the exclusion from the event.
             </li>
           </ul>
-          <h3 className="text-xl">Minimum requirements to be judged</h3>
+          <h4 className="text-l mt-4 font-bold">
+            Minimum Submission Requirements
+          </h4>
           <ul>
-            <li>A link to the open-source code must be provided</li>
-            <li>A short presentation file must describe your project</li>
+            <li>A link to the open-source code must be provided.</li>
+            <li>A short presentation file must describe your project.</li>
             <li>
               If applicable, the contract address(es) of your deployed demo must
               be provided, either on a testnet of your choice or mainnet of a
@@ -351,446 +337,234 @@ const HackerManual = () => {
             </li>
           </ul>
         </div>
-        <div className="flex justify-center">
-          <div className="border-b-[1px] mb-8 mt-4 border-berlin-yellow opacity-40 w-full"></div>
-        </div>
-        <div id="ethercards">
-          <h2 className="text-2xl font-bold">EtherCards with Goerli ETH</h2>
+        <div id="faucets">
+          <h3 className="text-xl mt-6 font-bold">
+            Faucets for Sepolia and Holesky
+          </h3>
           <p>
-            All participants will receive ETHBerlin EtherCards for hacking. To
-            encourage the usage of the cards and to simplify logistics, all
-            cards come pre-charged with Goerli and Sepolia Testnet Ether!
+            Dedicated testnet-token faucets are available for ETHBerlin04
+            hackers.
           </p>
-          <p>
-            The public addresses for the handed out EtherCards are available on
-            Github:{" "}
-            <a href="https://github.com/ethb3rlin/attendees" target="_blank">
-              github.com/ethb3rlin/attendees
-            </a>
-          </p>
-          <p>
-            You can use it for your hacks, drop funny tokens to these accounts
-            or use it for voting systems where only participants can vote. Be
-            creative and let us know how you used this list!
-          </p>
-        </div>
-        <div className="flex justify-center">
-          <div className="border-b-[1px] mb-8 mt-4 border-berlin-yellow opacity-40 w-full"></div>
-        </div>
-        <div id="prizes-bounties">
-          <h2 className="text-2xl font-bold">Prizes and Bounties</h2>
-          <p>
-            This year we are going to try something different. Please study the
-            following section carefully.
-          </p>
-          <h3 className="text-xl">Open Track</h3>
-          <p>
-            The open-track prize is the main hackathon award. Every project is
-            eligible, given they are respecting the hackathon rules. The open
-            track will be judged by everyone attending the event. There will be
-            no pitches and no judges. All the attendees can vote using their
-            EtherCards.
-          </p>
-          <p>
-            The winning project will be presenting at the closing ceremony and
-            the prize is 10000 DAI. There is only one.
-          </p>
-          <h3 className="text-xl">Track Awards</h3>
-          <p>
-            Track awards are based on covering specific topics. Each project can
-            only submit to one track maximum. It is not possible to apply for
-            multiple tracks!
-          </p>
-          <p>
-            One team member pitches in front of the judges. The domain experts
-            will evaluate the projects according to defined parameters. Judges
-            will also review code and ensure hackathon rules are respected.
-          </p>
-          <p>These are the four tracks:</p>
+          <p>You can receive 500 testnet Ether on Sepolia and Holesky:</p>
           <ul>
             <li>
-              <span className="fake-bold">
-                Counter-Surveillance: Security- and privacy-enhancing projects.
-              </span>{" "}
-              Topics: Privacy, Anonymity, Anti-identity, Security, Encryption.
-            </li>
-            <li>
-              <span className="fake-bold">
-                Freedom to Transact: Financial independence from institutions.
-              </span>{" "}
-              Topics: Dentralized Finance, Unstoppable Applications,
-              Crypto-Economics.
-            </li>
-            <li>
-              <span className="fake-bold">
-                Even the Odds: Empowering the underprivileged.
-              </span>{" "}
-              Topcis: Social Justice, Inclusion, Sustainability, Public Goods.
-            </li>
-            <li>
-              <span className="fake-bold">
-                Infrastructure: Providing distributed public goods.
-              </span>{" "}
-              Topics: Protocols, Networks, Infrastructure, Developer Tools,
-              Hardware.
-            </li>
-          </ul>
-          <p>
-            The winning projects will be presenting at the closing ceremony and
-            the prize is 7000 DAI for each track. There is only one per track,
-            four in total.
-          </p>
-          <h3 className="text-xl">Meta Awards</h3>
-          <p>
-            Meta awards reward certain aspects of your project. Every project is
-            eligible, given you are respecting the hackathon rules. Projects
-            should indicate which meta-award they think they qualify for in the
-            submission form.
-          </p>
-          <p>
-            There will be no pitches and our judges will review submissions
-            asynchronously during the track award pitching.
-          </p>
-          <p>These are the three meta awards:</p>
-          <ul>
-            <li>
-              <span className="fake-bold">Best Smart Contracts</span>:
-              outstanding smart contract code quality and documentation.
-            </li>
-            <li>
-              <span className="fake-bold">Best Design</span>: outstanding user
-              interfaces, graphics and experience.
-            </li>
-            <li>
-              <span className="fake-bold">Best Cryptography</span>: outstanding
-              encryption security.
-            </li>
-          </ul>
-          <p>
-            The winning projects will be presenting at the closing ceremony and
-            the prize is 6000 DAI for each award. There is only one per award,
-            three in total.
-          </p>
-          <h3 className="text-xl">Sponsor Bounties</h3>
-          <p>
-            You can find sponsor bounties{" "}
-            <a href="https://github.com/ethb3rlin/sponsor-bounties">
-              in this repository
-            </a>
-            .
-          </p>
-        </div>
-        <div className="flex justify-center">
-          <div className="border-b-[1px] mb-8 mt-4 border-berlin-yellow opacity-40 w-full"></div>
-        </div>
-        <div id="mentors">
-          <h2 className="text-2xl font-bold">Getting Help from Mentors</h2>
-          <p>
-            Ooops! You had an amazing idea, but now you are stuck? No worries,
-            our experienced mentors will help you as best as they can. And
-            here's how to get in touch:
-          </p>
-          <ul>
-            <li>
-              Reach all of our mentors via the simple ticket system, HELPq:{" "}
-              <a href="https://ask.ethberlin.ooo" target="_blank">
-                ask.ethberlin.ooo
+              Sepolia:{" "}
+              <a
+                href="https://sepolia.ethberlin.org"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                sepolia.ethberlin.org
               </a>
             </li>
             <li>
-              Discuss your issues in the{" "}
-              <a href="https://matrix.to/#/#mentors:tchncs.de">
-                Ask-our-mentors
-              </a>{" "}
-              channel.
-            </li>
-            <li>
-              Spot our mentors at the venue! They are wearing yellow t-shirts
-              and mentor buttons!
+              Holesky:{" "}
+              <a
+                href="https://holesky.ethberlin.org"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                holesky.ethberlin.org
+              </a>
             </li>
           </ul>
+          <p>
+            You will have to sign in with Zupass to authorize a faucet drop to
+            any of your addresses. Thank you, pk910 &lt;3
+          </p>
         </div>
-        <div className="flex justify-center">
-          <div className="border-b-[1px] mb-8 mt-4 border-berlin-yellow opacity-40 w-full"></div>
+        <div id="prizes-bounties">
+          <h3 className="text-xl mt-6 font-bold">Prizes and Bounties</h3>
+          <h4 className="text-l mt-4 font-bold">Track Awards</h4>
+          <div>
+            The track awards are centered around themes that align with our{" "}
+            <a href="/manifesto">manifesto</a>, and what we believe the industry
+            needs to re-focus on. The winning teams of the track awards receive{" "}
+            <strong>7,000 DAI</strong>.
+          </div>
+          <ul className="mt-2">
+            <li>
+              <b>Defensive Tooling:</b> This track is the right choice for you
+              if you want to hack on tools that enhance security and privacy.
+              It's about building projects that prioritize defense,
+              decentralization, and resilience to create a more secure and freer
+              world.
+              <br />
+              Think topics like encryption, counter-surveillance, identity
+              protection, anonymity, anti-identity, security, local data
+              handling, and anything that armors the individual against
+              intrusive data collection practices.
+            </li>
+            <li>
+              <b>Freedom to Transact:</b> This track is for you if you want to
+              ensure that anyone, anywhere, anytime can facilitate unrestricted
+              transactions.
+              <br />
+              We're looking for projects that enable people to access and send
+              money, or value, across borders without restrictions, promoting
+              financial inclusion. This track is for those who want to hack on
+              peer-to-peer solutions, build censorship-resistant applications,
+              and ensure that transactions can be private and secure.
+            </li>
+            <li>
+              <b>Social Technologies:</b> This track is all about platforms and
+              tools that enable informed and collective decision-making,
+              transparent governance, and collaboration and coordination among
+              decentralized communities.
+              <br />
+              If you want to build credibly neutral systems for voting,
+              governance, and social interaction, and systems that counter
+              disproportionate influence of centralized powers then this track
+              is for you and your team. Other ideas you could hack on are
+              consensus-finding algorithms, sybil resistance, and decentralized
+              social reputation.
+            </li>
+            <li>
+              <b>Infrastructure:</b> The backbone of the revolution. This track
+              is dedicated to the architects and builders laying down the
+              underlying infrastructures that robust distributed public goods
+              need to run efficiently and reliably.
+              <br />
+              Projects could include protocol specification and implementations,
+              networking, developer tools, and hardware.
+            </li>
+          </ul>
+          <h4 className="text-l mt-4 font-bold">Excellence Awards</h4>
+          <div>
+            Back by popular demand, please welcome the Excellence Awards. The
+            winners of each of these get <strong>5,000 DAI</strong> and these
+            are to recognise the following:
+          </div>
+          <ul className="mt-2">
+            <li>
+              <b>Best Smart Contracts:</b> Outstanding smart contract code
+              quality and documentation, security and gas-optimization.
+            </li>
+            <li>
+              <b>Best Social Impact:</b> Outstanding positive impact on
+              underserved communities and society as a whole.
+            </li>
+            <li>
+              <b>Best User Experience:</b> Outstanding user experience that does
+              not sacrifice on security, privacy or self-custody.
+            </li>
+          </ul>
+          <h4 className="text-l mt-4 font-bold">
+            The <i>Meta</i> Award
+          </h4>
+          <div className="mt-2">
+            We'd like to introduce a new category this year, the Meta Award, as
+            an ode to ETHBerlin being powered by many awesome open-source
+            projects. So for this one we invite you to go meta by building
+            contributions that improve the ETHBerlin experience itself! Projects
+            eligible for this award can either pick from our wishlist{" "}
+            <i>(coming soon™)</i> of contributions, or can build an entirely new
+            thing that they consider to be a positive impact for future versions
+            of ETHBerlin. The winner of this track will receive{" "}
+            <strong>4,000 DAI</strong>.
+          </div>
+          <h4 className="text-l mt-4 font-bold">The Hacker's Choice Award</h4>
+          <div className="mt-2">
+            A prize to be picked by the ETHBerlin hackers. After the hackathon
+            weekend, hackers will review all the projects and cast their votes
+            for their favorite project. Redistribution of the prize money cannot
+            be the essence of the project. The winner of this award will receive{" "}
+            <strong>7,000 DAI</strong>.
+          </div>
         </div>
-
-        <div id="submissions">
-          <h2 className="text-2xl font-bold">Submissions</h2>
-          <p>
-            You have to register and create your project at{" "}
-            <a href="https://ethberlin.devfolio.co/" target="_blank">
-              ethberlin.devfolio.co
-            </a>{" "}
-            for submission before Sunday, 11am.
-          </p>
-          <p>
-            Make sure to provide a link to your open-source repository, a video
-            or a demo, and if applicable, the contract address(es) of your
-            deployed application, either on a testnet of your choice or mainnet
-            of a platform of choice.
-          </p>
-          <p>
-            All submitted projects will be eligible for the main hackathon
-            prize. In addition, you have to select a category (track), which you
-            would like to pitch for, and up to two meta awards.
-          </p>
-          <p>Don't miss the deadline! Sunday 11am!</p>
-        </div>
-        <div className="flex justify-center">
-          <div className="border-b-[1px] mb-8 mt-4 border-berlin-yellow opacity-40 w-full"></div>
-        </div>
-        <div id="judging">
-          <h2 className="text-2xl font-bold">Judging</h2>
-          <p>
-            You can find the prizes and bounties in the{" "}
-            <a href="#prizes-bounties">above section</a>.
-          </p>
-          <p>
-            This year, we will use a different platform for your submissions. We
-            decided not to use devpost for this edition, since they are sadly
-            excluding participation from some regions by default. This
-            discriminatory and overly compliant behavior is kind of a "no" for
-            us, so instead we shall be collaborating with the much more
-            decentralised crew at{" "}
-            <a href="https://devfolio.co/home/" target="_blank" rel="noopener">
-              Devfolio
-            </a>
-            .
-          </p>
-
-          <p>
-            Each team will have one person pitch their project for 3 minutes
-            followed by a 2 minutes Q&A session. The pitch will be in front
-            of three judges each with different areas of exptertise.
-            The presenter should bring their laptop and use it for the pitch.
-            All judging will take place on the second floor. A schedule will be 
-            shared after 11:30 Sunday. Please be there at least 5 minutes
-            before your allocated timeslot. 
-          </p>
-
-          <p>
-            We aim to continuously improve the process. This is why this year we
-            will have three different approaches to judging:
-          </p>
-
+        <div className="flex justify-center"></div>
+        <div id="mentors">
+          <h3 className="text-xl mt-6 font-bold">Help from Mentors</h3>
+          <b>TL;DR</b>
           <ul>
             <li>
-              "Traditional judging": Judges watch live pitches & Judges check
-              submissions async digitally
-            </li>
-            <li>Community judging powered by quadratic voting</li>
-          </ul>
-          <p>
-            Overall, we also want to increase the transparency of the judging.
-            This is why all judge voting sheets will be made publicly available
-            after the winning ceremony.
-          </p>
-          <p>
-            Judging will take place on Sunday 18th September and the judges will
-            be reviewing project submissions, and watching pitches, from the
-            11am deadline until just before the closing ceremony. Note: we will
-            also be shuffling the judging teams halfway through just to make
-            sure there is no relative bias.
-          </p>
-
-          <p>
-            The track specific judges will watch live pitches, while the judges
-            allocated to the meta awards will review the submissions digitally.
-            There will be 24 track judges (8 groups of three), and each group
-            will include one technical person, one product/wildcard and one
-            business/VC judge.
-          </p>
-
-          <p>
-            As mentioned above, the meta specific judges will review submissions
-            digitally and there will be two pairs of judges per meta award.
-          </p>
-
-          <p>
-            The judges will be reviewing each submission with the following
-            criteria in mind.
-          </p>
-
-          <ul>
-            <li>
-              Technicality: How hard was it to build this and how does the
-              quality of the codebase compare? 
+              To get help ask questions in the Mentor Matrix room:{" "}
+              <a
+                href="https://matrix.to/#/#eb4-mentors:dod.ngo"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                #eb4-mentors:dod.ngo
+              </a>
             </li>
             <li>
-              Originality: Is this something completely new or are there 
-              already projects with grant funding working on a similar scope?
+              Or go to the Mentor Helpdesk located in the Node Café on the
+              ground floor.
+              <button
+                className={"font-bold  text-berlin-red text-sm"}
+                onClick={() => setIsMapModalOpen(true)}
+              >
+                <span className="align-middle">
+                  <span class="material-symbols-outlined text-sm mr-0.5 ml-1">
+                    my_location
+                  </span>
+                </span>
+                <span className="underline">Helpdesk Location</span>
+              </button>
             </li>
             <li>
-              Practicality: How would this submission survive in the real world,
-              outside of the crypto community? Or, if the project were to be
-              specifically targeted to the crypto community, how correctly
-              targeted is it?
-            </li>
-            <li>
-             
-            </li>
-            <li>
-              WOW Factor: What else is there about the
-              submission? Has this project and/or team defied expectations,
-              based on timing, efforts, etc.?
+              Helpdesk opening hours:
+              <ul className="leading-none">
+                <li className="mt-2">
+                  Friday from hacking start (19:00) until midnight
+                </li>
+                <li>Saturday from 08:00 to midnight </li>
+                <li> Sunday from 08:00 to submission deadline (12:00)</li>
+              </ul>
             </li>
           </ul>
-        </div>
-        <div className="flex justify-center">
-          <div className="border-b-[1px] mb-8 mt-4 border-berlin-yellow opacity-40 w-full"></div>
-        </div>
-        <div id="experiences">
-          <h2 className="text-2xl font-bold">Experiences</h2>
+          <h4 className="text-l mt-4 font-bold">Details </h4>
           <p>
-            ETHBerlin is a hackathon first but not a hackathon only. We have
-            different experiences for our hackers to enjoy during the weeekend:
-          </p>
-          <ul>
-            <li>
-              <b>Merkle Root: Berlin</b>{" "}
-              <LocationButton loc={locations.wildenbruch} />
-              <div>
-                Art exhibition curated by Stina Gustafsson and María Paula
-                Fernández.
-              </div>
-              <ul className="mt-2">
-                <li className="mb-1">Friday: 19:00-23:59</li>
-                <li className="mb-1">
-                  Saturday: 11:00-23:59 for hackers, 13:00-17:00 for public.
-                  Public tickets available{" "}
-                  <a
-                    href="https://www.eventbrite.com/e/merkle-root-berlin-tickets-415231547737"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    here
-                  </a>
-                  .
-                </li>
-                <li className="mb-1">Sunday 11:00-15:00</li>
-              </ul>
-            </li>
-            <li>
-              <b>Crypto Winter</b>
-              <LocationButton loc={locations.xrRoom} />
-              <div>
-                Audio Visual Installation by Zan Lyons and Alec Empire (Atari
-                Teenage Riot)
-              </div>
-              <ul>
-                <li>All Weekend</li>
-              </ul>
-            </li>
-            <li>
-              <b>No time to DAI</b>
-              <LocationButton loc={locations.alice} />
-              <div>
-                Escape Room and{" "}
-                <a href="https://ethberlin3.dist0rtion.com" target="_blank">
-                  {" "}
-                  Treasure Hunt{" "}
-                </a>
-                by the Social Dist0rtion Protocol
-              </div>
-              <ul>
-                <li>Starting from Saturday</li>
-              </ul>
-            </li>
-            <li>
-              <b>ETHBerlin³ Mind Spa by Rawciousness</b>
-              <LocationButton loc={locations.persius} />
-              <div>
-                A futuristic "mind" spa workshop guided by Grigoris Grigoriou
-                for deep relaxation and journey to your inner dimensions.
-              </div>
-              <ul>
-                <li>Saturday 18:00 until late</li>
-              </ul>
-            </li>
-            <li>
-              <b>Joy Space Zen Den</b>
-              <div>
-                A space to rest and regenerate with holistic wellness &
-                mindfulness experiences.
-              </div>
-              <LocationButton loc={locations.persius} />
-              <ul className="ml-2">
-                <div className="mt-1">Saturday</div>
-                <li className="mb-1">11:00 - Yoga with Luisa</li>
-                <li className="mb-1">
-                  13:00 - Meditation + Breathwork with Nadeya
-                </li>
-                <li className="mb-1">
-                  15:00 - 8OS Movement Practice with Dmitry (2HR)
-                </li>
-                <li className="mb-1">17:00 - Yin Yoga with Luisa</li>
-                <li className="mb-1">
-                  18:00 - Meditation + Breathwork with Nadeya
-                </li>
-                <li>
-                  Individual Sessions:
-                  <li className="mb-1">
-                    10:00-14:00 - Seated Massage with Genevieve
-                  </li>
-                  <li className="mb-1">
-                    14:00-18:00 - Individual Reiki with Elia
-                  </li>
-                </li>
-                <div>Sunday</div>
-                <li className="mb-1">
-                  11:00 - Functional Vinyasa with Genevieve
-                </li>
-                <li className="mb-1">
-                  12:00 - Meditation & Breathwork or Strecthing with Nadeya
-                </li>
-              </ul>
-            </li>
-            <li className="mt-6">
-              <b>Relax-Sleep-Code in the Cinema</b>
-              <LocationButton loc={locations.cinema} />
-            </li>
-            <li>
-              <b>Chess Club</b>
-              <LocationButton loc={locations.yard1} />
-              <div>Show off your chess skills in our dedicated area</div>
-              <ul>
-                <li>Saturday from 15:00</li>
-              </ul>
-            </li>
-            <li>
-              <b>Graffiti Art Collab</b>
-              <div>a collaborative art space</div>
-            </li>
-          </ul>
-        </div>
-        <div className="flex justify-center">
-          <div className="border-b-[1px] mb-8 mt-4 border-berlin-yellow opacity-40 w-full"></div>
-        </div>
-        <div id="afterparty" className="">
-          <h2 className="text-2xl font-bold">Afterparty</h2>
-          <LocationButton loc={locations.watergate} />
-          <p>
-            What else is there to be done after 50 hours of hacking? Right, the
-            afterparty! This year we are celebrating our achievements at the
-            Watergate; doors: 21:00.
+            As with all previous ETHBerlins we've made sure to have a team of
+            amazing mentors ready to help you build the best possible projects
+            throughout the weekend. No questions are too small or too big to
+            ask. As a hacker you can find the mentors in person as per the TL;DR
+            above. You can also contact them with any questions you might have
+            in the Matrix room that's also listed in the TL;DR. If you ask the
+            question in the middle of the night you might not get a reply right
+            away, but we will make sure to address it first thing in the
+            morning.
           </p>
           <p>
-            You will receive an afterparty wristband during the hackathon
-            registration. If you don't want to or cannot attend on Sunday
-            evening, you can share it with your friends. There will be no
-            additional tickets or guest lists!
+            We encourage hackers to help each other out and keep an eye on the
+            mentoring matrix channel. There might be some hackers with very
+            specific expert knowledge and it would be great if this could be
+            shared.
           </p>
+          <p>
+            You might also see the mentors througout the venue. They'll be
+            wearing a button/badge on their shirt saying "Mentor". They're all
+            very friendly so don't hesitate to ask them a question or get their
+            feedback on something.
+          </p>
+          <div id="submissions">
+            <h3 className="text-xl mt-6 font-bold">Submissions</h3>
+            <p>The submissions tool will be published soon.</p>
+          </div>
+          <div id="judging">
+            <h3 className="text-xl mt-6 font-bold">Judging</h3>
+            <p>The judging process will be documented soon.</p>
+          </div>
+          <div id="voting">
+            <h2 className="text-2xl mt-8 font-bold">After the Hackathon</h2>
+            <h3 className="text-xl mt-6 font-bold">Voting</h3>
+            <p>The voting process will be explained soon.</p>
+          </div>
+          <div id="party"></div>
         </div>
+
+        <VenueMapModal
+          isOpen={isMapModalOpen}
+          handleCloseModal={handleCloseModal}
+          activeMapName={"Ground Floor (#0)"}
+          activeMap={groundFloor} // only ground floor
+          activeRoomClass={"nodeCafe"}
+        />
+
+        <div className="flex justify-center"></div>
       </div>
-      <VenueMapModal
-        isOpen={isMapModalOpen}
-        handleCloseModal={handleCloseModal}
-        activeMapName={activeMapName}
-        activeMap={activeMap}
-        activeRoomClass={activeRoomClass}
-      />
     </Layout>
   );
 };
 
-export default HackerManual;
+export default Hack;
