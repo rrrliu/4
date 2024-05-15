@@ -457,11 +457,11 @@ const Hack = () => {
             an ode to ETHBerlin being powered by many awesome open-source
             projects. So for this one we invite you to go meta by building
             contributions that improve the ETHBerlin experience itself! Projects
-            eligible for this award can either pick from our wishlist{" "}
-            <i>(coming soon™)</i> of contributions, or can build an entirely new
+            eligible for this award can either pick from our <a href="https://office.ethberlin.org/pad/#/2/pad/view/nfLDua4xIU1WiiX+x82icF175fXVv3Ge1Cjpicjq1RE/">wishlist</a>
+            , or can build an entirely new
             thing that they consider to be a positive impact for future versions
             of ETHBerlin. The winner of this track will receive{" "}
-            <strong>4,000 DAI</strong>.
+            <strong>4,000 DAI</strong> and <a href="https://devcon.org/">DEVCon7</a> tickets.
           </div>
           <h4 className="text-l mt-4 font-bold">The Hacker's Choice Award</h4>
           <div className="mt-2">
