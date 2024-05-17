@@ -183,11 +183,7 @@ const Home = () => {
             </p>
 
             <p>
-              To learn more about the hackathon, press{" "}
-              <span className="font-ocra text-sm">
-                &lt;&lt;<span className="text-berlin-red">A</span>&lt;
-              </span>
-              , and to read our manifesto, press{" "}
+              To read our manifesto, press{" "}
               <span className="font-ocra text-sm">
                 &lt;&lt;<span className="text-berlin-red">M</span>&lt;
               </span>
@@ -196,9 +192,12 @@ const Home = () => {
 
             <p>
               ETHBerlin is not a conference but a hackathon. Every attendee
-              plays an active role in the event. <b>All applications are closed</b>.
-              ETHBerlin04 is part of the <a href="https://blockchainweek.berlin" target="_blank">blockchainweek.berlin</a>.
-              See you in Berlin!
+              plays an active role in the event.{" "}
+              <b>All applications are closed</b>. ETHBerlin04 is part of the{" "}
+              <a href="https://blockchainweek.berlin" target="_blank">
+                blockchainweek.berlin
+              </a>
+              . See you in Berlin!
             </p>
           </div>
         </div>
