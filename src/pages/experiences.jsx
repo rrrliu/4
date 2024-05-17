@@ -565,6 +565,30 @@ const Experiences = () => {
               evening, you can share it with your friends.
             </div>
           </div>
+          <div className="mt-8">
+            <div className="inline-flex flex-wrap items-center">
+              <h3 className="font-bold text-lg mr-1">
+                ETHBerlin Privacy Corner
+              </h3>
+              <span>by</span>
+              <a
+                href="https://web3privacy.info/"
+                target="blank"
+                rel="noreferrer noopener"
+                className="underline ml-1"
+              >
+                Web3 Privacy now
+              </a>
+              <LocationButton loc={locations.library} />
+            </div>
+            <div className="ml-4">
+              Hacker-focused safe space where you can get productive feedback on
+              your hackathon project idea, its privacy features, and general
+              viability. The Web3 Privacy team will be available throughout the
+              weekend and will host an open feedback session from 10AM-12PM on
+              Saturday at the Library.
+            </div>
+          </div>
         </div>
 
         <VenueMapModal
