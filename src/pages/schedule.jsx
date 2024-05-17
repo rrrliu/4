@@ -268,11 +268,11 @@ const Program = () => {
         setIsMapModalOpen(true);
       },
     },
-    creatorsLab: {
-      name: "Creator's Lab",
+    giftShop: {
+      name: "Gift Shop",
       handler: () => {
         handleGroundFloor();
-        setActiveRoomClass("creators-lab");
+        setActiveRoomClass("giftShop");
         setIsMapModalOpen(true);
       },
     },
@@ -364,11 +364,11 @@ const Program = () => {
         setIsMapModalOpen(true);
       },
     },
-    xrRoom: {
-      name: "XR Room",
+    library: {
+      name: "Library",
       handler: () => {
-        handleGroundFloor();
-        setActiveRoomClass("xrRoom");
+        handleFirstFloor();
+        setActiveRoomClass("library");
         setIsMapModalOpen(true);
       },
     },
@@ -380,11 +380,11 @@ const Program = () => {
         setIsMapModalOpen(true);
       },
     },
-    persius: {
-      name: "Persius",
+    wellnessRoom: {
+      name: "Wellness & Planeterium",
       handler: () => {
         handleFifthFloor();
-        setActiveRoomClass("persius");
+        setActiveRoomClass("wellnessRoom");
         setIsMapModalOpen(true);
       },
     },
@@ -393,6 +393,14 @@ const Program = () => {
       handler: () => {
         handleFifthFloor();
         setActiveRoomClass("cinema");
+        setIsMapModalOpen(true);
+      },
+    },
+    cinebar: {
+      name: "Cinebar",
+      handler: () => {
+        handleFifthFloor();
+        setActiveRoomClass("cinebar");
         setIsMapModalOpen(true);
       },
     },
@@ -700,6 +708,16 @@ const Program = () => {
               title="Breakfast"
               eventLocations={[locations.restaurant]}
             />
+            {isExtravaganza && (
+              <ProgramItem
+                dayStr="2024-05-25"
+                startTime="10:00"
+                endTime="11:30"
+                title="Kundalini yoga"
+                className={"text-berlin-red"}
+                eventLocations={[locations.wellnessRoom]}
+              />
+            )}
             <SpeechItem
               dayStr="2024-05-25"
               startTime="11:00"
@@ -740,6 +758,23 @@ const Program = () => {
                 eventLocations={[locations.artExhibition]}
               />
             )}
+            <ProgramItem
+              dayStr="2024-05-25"
+              startTime="13:00"
+              endTime="15:00"
+              title="Lunch"
+              eventLocations={[locations.restaurant]}
+            />
+            {isExtravaganza && (
+              <ProgramItem
+                dayStr="2024-05-25"
+                startTime="13:00"
+                endTime="15:00"
+                title="Reiki practitioner available"
+                className={"text-berlin-red"}
+                eventLocations={[locations.wellnessRoom]}
+              />
+            )}
             {isExtravaganza && (
               <SpeechItem
                 dayStr="2024-05-25"
@@ -764,19 +799,32 @@ const Program = () => {
             )}
             <ProgramItem
               dayStr="2024-05-25"
-              startTime="13:00"
-              endTime="15:00"
-              title="Lunch"
-              eventLocations={[locations.restaurant]}
-            />
-            <ProgramItem
-              dayStr="2024-05-25"
               startTime="14:00"
               endTime="17:00"
               title="Mentoring Expert Office Hours"
               description="Check mentor area for detailed schedule!"
-              eventLocations={[locations.nodeCafe]} //TODO: node cafe
+              eventLocations={[locations.nodeCafe]}
             />
+            {isExtravaganza && (
+              <ProgramItem
+                dayStr="2024-05-25"
+                startTime="15:00"
+                endTime="16:30"
+                title="Sound healing practice"
+                className={"text-berlin-red"}
+                eventLocations={[locations.wellnessRoom]}
+              />
+            )}
+            {isExtravaganza && (
+              <ProgramItem
+                dayStr="2024-05-25"
+                startTime="17:00"
+                endTime="19:00"
+                title="Yoga flow + Sound Bath"
+                className={"text-berlin-red"}
+                eventLocations={[locations.wellnessRoom]}
+              />
+            )}
             {isExtravaganza && (
               <div className="text-berlin-red">
                 <ProgramItem
@@ -918,6 +966,26 @@ const Program = () => {
                 title="Breakfast"
                 eventLocations={[locations.restaurant]}
               />
+              {isExtravaganza && (
+                <ProgramItem
+                  dayStr="2024-05-26"
+                  startTime="10:00"
+                  endTime="10:45"
+                  title="Active/dance meditation"
+                  className={"text-berlin-red"}
+                  eventLocations={[locations.wellnessRoom]}
+                />
+              )}
+              {isExtravaganza && (
+                <ProgramItem
+                  dayStr="2024-05-26"
+                  startTime="10:45"
+                  endTime="11:30"
+                  title="Vibro Acoustic massage 1:1 first slot"
+                  className={"text-berlin-red"}
+                  eventLocations={[locations.wellnessRoom]}
+                />
+              )}
               <ProgramItem
                 dayStr="2024-05-26"
                 startTime="11:30"
@@ -925,6 +993,16 @@ const Program = () => {
                 className={"font-bold italic"}
                 eventLocations={[]}
               />
+              {isExtravaganza && (
+                <ProgramItem
+                  dayStr="2024-05-26"
+                  startTime="11:45"
+                  endTime="12:30"
+                  title="Vibro acoustic massage 1:1 2nd slot"
+                  className={"text-berlin-red"}
+                  eventLocations={[locations.wellnessRoom]}
+                />
+              )}
               <ProgramItem
                 dayStr="2024-05-26"
                 startTime="12:00"

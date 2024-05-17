@@ -29,6 +29,9 @@ export default function HTML(props) {
                     case 'a':
                         window.location.href= "/art";
                         break;
+                    case 'e':
+                        window.location.href= "/experiences";
+                        break;
                     case 'm':
                         window.location.href= "/manifesto";
                         break;

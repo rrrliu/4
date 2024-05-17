@@ -7,6 +7,7 @@ import secondFloor from "../images/secondFloor.png";
 import thirdFloor from "../images/thirdFloor.png";
 import fourthFloor from "../images/fourthFloor.png";
 import fifthFloor from "../images/fifthFloor.png";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 const Experiences = () => {
   const [isMapModalOpen, setIsMapModalOpen] = React.useState(false);
@@ -194,12 +195,6 @@ const Experiences = () => {
         setIsMapModalOpen(true);
       },
     },
-    aeden: {
-      name: "Aeden",
-      handler: () => {
-        window.open("https://aedenberlin.com/", "_blank");
-      },
-    },
   };
 
   const LocationButton = ({ loc, className }) => (
@@ -301,14 +296,14 @@ const Experiences = () => {
                 and recenter. At night the space will transform into a starry
                 night, with areas for hackers to sleep or unwind.
               </div>
-              <div className="mt-4 mb-1">Saturday 24th:</div>
+              <div className="mt-4 mb-1">Saturday 25th:</div>
               <ul className="list-disc list-inside ml-4 ">
                 <li>10:00 - 11:30 - Kundalini yoga</li>
                 <li>13:00 - 15:00 - Reiki practitioner available</li>
                 <li>15:00 - 16:30 - Sound healing practice</li>
                 <li>17:00 - 19:00 - Yoga flow + Sound Bath</li>
               </ul>
-              <div className="mt-4 mb-1">Sunday 25th:</div>
+              <div className="mt-4 mb-1">Sunday 26th:</div>
               <ul className="list-disc list-inside ml-4 ">
                 <li>10:00 - 10:45 Active/dance meditation</li>
                 <li>10:45 - 11:30 Vibro Acoustic massage 1:1 first slot</li>
@@ -350,7 +345,6 @@ const Experiences = () => {
               >
                 Base
               </a>
-              <LocationButton loc={locations.yard1} />
             </div>
             <div className="ml-4">
               Pizza will be served on Saturday, after 22 hs. Stay tuned for the
@@ -501,7 +495,7 @@ const Experiences = () => {
               >
                 TelediskoDAO
               </a>
-              <LocationButton loc={locations.yard1} />
+              <LocationButton loc={locations.yard0} />
             </div>
             <div className="ml-4">
               The teledisko needs no further explanation. Brought to you by
@@ -552,7 +546,15 @@ const Experiences = () => {
               >
                 Fuel
               </a>
-              <LocationButton loc={locations.aeden} />
+              <a
+                href="https://aedenberlin.com"
+                target="blank"
+                rel="noreferrer noopener"
+                className="inline-flex items-center ml-2 text-berlin-red"
+              >
+                <FaExternalLinkAlt className="mr-[2px]" />{" "}
+                <strong>Aeden</strong>
+              </a>
             </div>
             <div className="ml-4">From 8PM onwards on Sunday night.</div>
             <div className="ml-4">

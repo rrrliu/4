@@ -89,8 +89,7 @@ const Layout = ({ children, showEthDiamond, className, hidden }) => {
             target="_blank"
             rel="noreferrer"
           >
-            &lt;&lt;<span className="text-berlin-red">S</span>&lt;OURCE
-            CODE(&#94;)
+            &lt;&lt;S&lt;OURCE(&#94;)
           </a>
         </footer>
       </div>
