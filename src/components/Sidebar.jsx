@@ -33,6 +33,10 @@ const Sidebar = ({ className }) => {
         {" "}
         &lt;&lt;<span className="text-berlin-red">V</span>&lt;ENUE
       </a>
+      <a className="my-2" href="/experiences">
+        {" "}
+        &lt;&lt;<span className="text-berlin-red">E</span>&lt;XPERIENCES
+      </a>
       <a className="my-2" href="/art">
         {" "}
         &lt;&lt;<span className="text-berlin-red">A</span>&lt;RT
@@ -44,19 +48,6 @@ const Sidebar = ({ className }) => {
       <a className="my-2" href="/contributors">
         {" "}
         &lt;&lt;<span className="text-berlin-red">C</span>&lt;ONTRIBUTORS
-      </a>
-      <a className="my-2" href="/decentralization">
-        {" "}
-        &lt;&lt;<span className="text-berlin-red">D</span>&lt;EPARTMENT
-      </a>
-      <a
-        className="my-2"
-        href="https://blog.dod.ngo/"
-        target="_blank"
-        rel="noreferrer"
-      >
-        {" "}
-        &lt;&lt;<span className="text-berlin-red">B</span>&lt;LOG (&#94;)
       </a>
     </nav>
   );
