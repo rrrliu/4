@@ -420,7 +420,7 @@ const Program = () => {
 
   return (
     <Layout>
-      <div className="textbox max-w-xl">
+      <div className="textbox">
         <h1 className="my-4 underline text-secondary font-ocra">
           &lt;&lt;S&lt;CHEDULE
         </h1>
