@@ -363,14 +363,14 @@ const Experiences = () => {
                 rel="noreferrer noopener"
                 className="underline ml-1"
               >
-                RefractionDAO
+                Refraction
               </a>
               <LocationButton loc={locations.artExhibition} />
             </div>
             <div className="ml-4 decorate-links">
               <div>
-                Art exhibition curated by Stina Gustafsson and María Paula
-                Fernández.
+                Art exhibition curated by Department of Decentralization and
+                Refraction.
               </div>
               <ul className=" mt-2">
                 <li>Friday: 19:00 - 23:59 for hackers</li>
