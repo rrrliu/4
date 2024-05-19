@@ -732,7 +732,7 @@ const Program = () => {
                 startTime="11:00"
                 endTime="23:59"
                 className={"text-berlin-red"}
-                title="Art Exhibition: Co-Create"
+                title="Art Exhibition: wCreate"
                 eventLocations={[locations.artExhibition]}
               />
             )}

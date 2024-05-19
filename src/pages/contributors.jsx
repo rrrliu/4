@@ -1,7 +1,7 @@
 import Layout from "../components/Layout";
 import React, { useEffect } from "react";
 // import mentors from "../assets/people/mentors";
-// import judges from "../assets/people/judges";
+import judges from "../assets/people/judges";
 import twitterLogo from "../assets/twitter.png";
 import githubLogo from "../assets/github.png";
 import team from "../assets/people/team";
@@ -23,10 +23,12 @@ const Person = ({
   return (
     <div className="mx-4 my-6 w-48 hover:text-berlin-red">
       <div className="flex flex-col justify-center items-center h-48 w-full relative break-words">
-        <img
-          src={maskImage.default}
-          className="max-h-full max-w-full top-0 left-0 right-0 bottom-0 absolute m-auto z-10 opacity-95 hover:opacity-0 transition-all duration-200 ease-in-out"
-        />
+        {maskImage && (
+          <img
+            src={maskImage.default}
+            className="max-h-full max-w-full top-0 left-0 right-0 bottom-0 absolute m-auto z-10 opacity-95 hover:opacity-0 transition-all duration-200 ease-in-out"
+          />
+        )}
         <img
           src={image.default}
           className="max-h-full max-w-full top-0 left-0 right-0 bottom-0 absolute m-auto"
@@ -123,7 +125,7 @@ const Contributors = () => {
   };
 
   const handleJudges = () => {
-    setPeople([]);
+    setPeople(judges);
     setTitle("Judges");
   };
 
@@ -183,6 +185,15 @@ const Contributors = () => {
           >
             {"<<Workshop<Hosts<<<<<"}
           </button>
+          <button
+            className={`${
+              title === "Judges" ? "text-berlin-red underline" : ""
+            } text-xl md:text-xl mx-4 my-2 
+          `}
+            onClick={handleJudges}
+          >
+            {"<<Judges<<<<"}
+          </button>
           {/* <button
             className={`${
               title === "Mentors" ? "text-berlin-red underline" : ""
@@ -191,24 +202,6 @@ const Contributors = () => {
             onClick={handleMentors}
           >
             {"<<Mentors<<<"}
-          </button>
-          <button
-            className={`${
-              title === "Judges" ? "text-berlin-red underline" : ""
-            } text-xl md:text-2xl mx-4 my-2 
-          `}
-            onClick={handleJudges}
-          >
-            {"<<Judges<<<<"}
-          </button>
-          <button
-            className={`${
-              title === "Keynotes" ? "text-berlin-red underline" : ""
-            } text-xl md:text-2xl mx-4 my-2 
-          `}
-            onClick={handleKeynotes}
-          >
-            {"<<Speakers<<"}
           </button> */}
         </div>
         <div>
