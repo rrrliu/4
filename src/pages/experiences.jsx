@@ -574,7 +574,7 @@ const Experiences = () => {
               </h3>
               <span>by</span>
               <a
-                href="https://web3privacy.info/"
+                href="https://c24ber.web3privacy.info"
                 target="blank"
                 rel="noreferrer noopener"
                 className="underline ml-1"
@@ -584,11 +584,11 @@ const Experiences = () => {
               <LocationButton loc={locations.library} />
             </div>
             <div className="ml-4">
-              Hacker-focused safe space where you can get productive feedback on
-              your hackathon project idea, its privacy features, and general
-              viability. The Web3 Privacy team will be available throughout the
-              weekend and will host an open feedback session from 10AM-12PM on
-              Saturday at the Library.
+              Hacker-focused safe space where you can get productive feedback
+              on your hackathon project idea, its privacy features, and general viability.
+              The Web3 Privacy team will be available throughout the weekend
+              and will host open feedback and ideation sessions.
+              For more info please see: <a href="https://c24ber.web3privacy.info">https://c24ber.web3privacy.info</a>
             </div>
           </div>
         </div>
