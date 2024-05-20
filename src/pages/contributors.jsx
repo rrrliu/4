@@ -10,6 +10,7 @@ import workshopHosts from "../assets/people/workshops";
 import ETHBerlin from "../components/ETHBerlin";
 import { TbWorldWww } from "react-icons/tb";
 import { SiFarcaster } from "react-icons/si";
+import { BsGitlab } from "react-icons/bs";
 
 const Person = ({
   name,
@@ -20,6 +21,7 @@ const Person = ({
   github,
   website,
   farcaster,
+  gitlab,
   organization2,
 }) => {
   return (
@@ -80,6 +82,11 @@ const Person = ({
         {farcaster && (
           <a href={farcaster} rel="noopener noreferrer" target="_blank">
             <SiFarcaster className="mx-2 w-5 h-5 opacity-40 hover:opacity-100 text-black" />
+          </a>
+        )}
+        {gitlab && (
+          <a href={gitlab} rel="noopener noreferrer" target="_blank">
+            <BsGitlab className="mx-2 w-5 h-5 opacity-40 hover:opacity-100 text-black" />
           </a>
         )}
         {website && (
