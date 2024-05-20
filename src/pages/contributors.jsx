@@ -1,6 +1,6 @@
 import Layout from "../components/Layout";
 import React, { useEffect } from "react";
-// import mentors from "../assets/people/mentors";
+import mentors from "../assets/people/mentors";
 import judges from "../assets/people/judges";
 import twitterLogo from "../assets/twitter.png";
 import githubLogo from "../assets/github.png";
@@ -9,6 +9,7 @@ import speakers from "../assets/people/speakers";
 import workshopHosts from "../assets/people/workshops";
 import ETHBerlin from "../components/ETHBerlin";
 import { TbWorldWww } from "react-icons/tb";
+import { SiFarcaster } from "react-icons/si";
 
 const Person = ({
   name,
@@ -18,6 +19,7 @@ const Person = ({
   twitter,
   github,
   website,
+  farcaster,
   organization2,
 }) => {
   return (
@@ -29,10 +31,12 @@ const Person = ({
             className="max-h-full max-w-full top-0 left-0 right-0 bottom-0 absolute m-auto z-10 opacity-95 hover:opacity-0 transition-all duration-200 ease-in-out"
           />
         )}
-        <img
-          src={image.default}
-          className="max-h-full max-w-full top-0 left-0 right-0 bottom-0 absolute m-auto"
-        />
+        {image && (
+          <img
+            src={image.default}
+            className="max-h-full max-w-full top-0 left-0 right-0 bottom-0 absolute m-auto"
+          />
+        )}
       </div>
       <div className="text-2xl text-center mt-2">{name}</div>
       {organization && (
@@ -73,10 +77,15 @@ const Person = ({
             />
           </a>
         )}
+        {farcaster && (
+          <a href={farcaster} rel="noopener noreferrer" target="_blank">
+            <SiFarcaster className="mx-2 w-5 h-5 opacity-40 hover:opacity-100 text-black" />
+          </a>
+        )}
         {website && (
           <a href={website} rel="noopener noreferrer" target="_blank">
             <TbWorldWww
-              className="mx-2 w-6 h-6 opacity-40 hover:opacity-100"
+              className="mx-2 w-6 h-6 opacity-40 hover:opacity-100 text-black"
               alt="website"
             />
           </a>
@@ -120,7 +129,7 @@ const Contributors = () => {
   }, []);
 
   const handleMentors = () => {
-    setPeople([]);
+    setPeople(mentors);
     setTitle("Mentors");
   };
 
@@ -194,15 +203,15 @@ const Contributors = () => {
           >
             {"<<Judges<<<<"}
           </button>
-          {/* <button
+          <button
             className={`${
               title === "Mentors" ? "text-berlin-red underline" : ""
-            } text-xl md:text-2xl mx-4 my-2 
+            } text-xl md:text-xl mx-4 my-2 
           `}
             onClick={handleMentors}
           >
             {"<<Mentors<<<"}
-          </button> */}
+          </button>
         </div>
         <div>
           <div className="text-4xl mt-8 font-ocra">{title}</div>
