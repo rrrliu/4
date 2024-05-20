@@ -559,7 +559,7 @@ const Program = () => {
                   className={"text-berlin-red"}
                   startTime="19:00"
                   endTime="23:59"
-                  title="Art Exhibition: Co-Create"
+                  title="Art Exhibition: co-create"
                   eventLocations={[locations.artExhibition]}
                 />
               )}
@@ -732,7 +732,7 @@ const Program = () => {
                 startTime="11:00"
                 endTime="23:59"
                 className={"text-berlin-red"}
-                title="Art Exhibition: wCreate"
+                title="Art Exhibition: co-create"
                 eventLocations={[locations.artExhibition]}
               />
             )}
