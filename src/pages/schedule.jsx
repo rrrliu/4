@@ -572,6 +572,16 @@ const Program = () => {
                 photo={austin}
                 eventLocations={[locations.lexis]}
               />
+              {isExtravaganza && (
+                <ProgramItem
+                  dayStr="2024-05-24"
+                  startTime="20:00"
+                  endTime="21:00"
+                  title="Privacy Corner: Project Ideation Session"
+                  className={"text-berlin-red"}
+                  eventLocations={[locations.library]}
+                />
+              )}
               <SpeechItem
                 dayStr="2024-05-24"
                 startTime="20:15"
@@ -737,6 +747,16 @@ const Program = () => {
               />
             )}
             {isExtravaganza && (
+              <ProgramItem
+                dayStr="2024-05-25"
+                startTime="12:00"
+                endTime="18:00"
+                className={"text-berlin-red"}
+                title="Screenprinting and Matcha"
+                eventLocations={[locations.library]}
+              />
+            )}
+            {isExtravaganza && (
               <SpeechItem
                 dayStr="2024-05-25"
                 startTime="12:00"
@@ -813,6 +833,16 @@ const Program = () => {
                 title="Sound healing practice"
                 className={"text-berlin-red"}
                 eventLocations={[locations.wellnessRoom]}
+              />
+            )}
+            {isExtravaganza && (
+              <ProgramItem
+                dayStr="2024-05-25"
+                startTime="16:00"
+                endTime="17:00"
+                title="Privacy Corner: Project Pitches and Feedback Session"
+                className={"text-berlin-red"}
+                eventLocations={[locations.library]}
               />
             )}
             {isExtravaganza && (
