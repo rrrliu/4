@@ -89,7 +89,7 @@ const Hack = () => {
               <a href="#faucets">Faucets for Sepolia and Holesky</a>
             </li>
             <li>
-              <a href="#prizes-bounties">Prizes and Bounties </a>
+              <a href="#tracks-prizes">Tracks and Prizes</a>
             </li>
             <li>
               <a href="#mentors">Getting Help from Mentors</a>
@@ -373,8 +373,8 @@ const Hack = () => {
             any of your addresses. Thank you, pk910 &lt;3
           </p>
         </div>
-        <div id="prizes-bounties">
-          <h3 className="text-xl mt-6 font-bold">Prizes and Bounties</h3>
+        <div id="tracks-prizes">
+          <h3 className="text-xl mt-6 font-bold">Tracks and Prizes</h3>
           <h4 className="text-l mt-4 font-bold">Track Awards</h4>
           <div>
             The track awards are centered around themes that align with our{" "}
