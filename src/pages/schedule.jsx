@@ -1180,9 +1180,30 @@ Then we will look at tools and techniques we can use to govern and sustain crypt
                 dayStr="2024-05-26"
                 startTime="19:00"
                 endTime="20:00"
-                title="Closing aperitif, snacks & mingle with DJ"
+                title={"Closing aperitif, snacks & mingle with DJ"}
                 eventLocations={[locations.yard0]}
               />
+              <ProgramItem
+                dayStr="2024-05-26"
+                startTime="19:00"
+                endTime="20:00"
+                title={
+                  <span className="inline-flex items-center">
+                    YaNKeY{" "}
+                    <a
+                      href="https://on.soundcloud.com/cEYw4"
+                      className="ml-2 inline-block opacity-70 hover:opacity-100 text-berlin-red hover:text-berlin-red"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <ImSoundcloud />
+                    </a>
+                  </span>
+                }
+                className="ml-12"
+                eventLocations={[locations.yard0]}
+              />
+
               <ProgramItem
                 dayStr="2024-05-26"
                 startTime="20:00"
