@@ -37,7 +37,7 @@ import { FaTwitter } from "react-icons/fa";
 import { ImSoundcloud } from "react-icons/im";
 
 const currentDate = new Date();
-// const currentDate = new Date("2024-05-25T00:20:00+02:00");
+// const currentDate = new Date("2024-05-26T12:30:00+02:00");
 
 const ProgramItem = ({
   title,
@@ -58,7 +58,7 @@ const ProgramItem = ({
     <li
       className={`${
         currentDate > endDate
-          ? "text-gray-700"
+          ? "text-gray-300"
           : currentDate > startDate
           ? "font-bold animate-pulse-faster"
           : className
@@ -73,7 +73,7 @@ const ProgramItem = ({
         <button
           className={`${
             currentDate > endDate
-              ? "text-gray-700"
+              ? "text-gray-300"
               : currentDate > startDate
               ? "font-bold animate-pulse-faster"
               : "text-berlin-red"
@@ -133,7 +133,7 @@ const SpeechItem = ({
       <div
         className={`ml-8 -mt-2 mb-4 text-sm ${
           currentDate > endDate
-            ? "text-gray-700"
+            ? "text-gray-300"
             : currentDate > startDate
             ? "font-bold animate-pulse-faster"
             : ""
@@ -148,7 +148,7 @@ const SpeechItem = ({
         <button
           onClick={() => setIsModalOpen(true)}
           className={`underline ${
-            currentDate > endDate ? "text-gray-700" : "text-gray-500"
+            currentDate > endDate ? "text-gray-300" : "text-gray-500"
           } mx-2`}
         >
           More Info
@@ -427,8 +427,8 @@ const Program = () => {
         <div className="">
           <p className="mt-4">
             Welcome to <ETHBerlin />! If you have the chance, please claim your
-            badge early during preregistration at the venue to avoid long queues in
-            the evening.
+            badge early during preregistration at the venue to avoid long queues
+            in the evening.
           </p>
           {/* Use top: -1px to detect stickyness https://davidwalsh.name/detect-sticky */}
 
