@@ -477,25 +477,25 @@ const Program = () => {
                 startTime="12:00"
                 endTime="16:00"
                 title="Pre-registration"
-                eventLocations={[]}
+                eventLocations={[locations.giftShop]}
               />
               <ProgramItem
                 dayStr="2024-05-24"
                 startTime="16:00"
                 title="Registration"
-                eventLocations={[]}
+                eventLocations={[locations.giftShop]}
               />
               <ProgramItem
                 dayStr="2024-05-24"
                 startTime="16:00"
                 title="Doors open"
-                eventLocations={[]}
+                eventLocations={[locations.yard0]}
               />
               <SpeechItem
                 dayStr="2024-05-24"
                 startTime="16:30"
                 endTime="17:00"
-                title="Talk: Title TBA"
+                title="Talk: We need Censorships"
                 speakerName="Fatemeh Fannizadeh (Swarm)"
                 photo={fat}
                 eventLocations={[locations.lexis]}
@@ -1138,6 +1138,12 @@ Then we will look at tools and techniques we can use to govern and sustain crypt
                 speakerName={"Ameen Soleimani (0xbow)"}
                 photo={ameen}
                 eventLocations={[locations.lexis]}
+              />
+              <ProgramItem
+                dayStr="2024-05-26"
+                startTime="16:30"
+                title="Upper floors close"
+                eventLocations={[]}
               />
               <SpeechItem
                 dayStr="2024-05-26"
