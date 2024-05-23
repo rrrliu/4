@@ -11,6 +11,7 @@ export default [
     image: require("./afri.jpeg"),
     maskImage: require("./afri-mask.jpeg"),
     github: "https://github.com/q9f",
+    website: "https://q9f.cc/",
   },
   {
     name: "Franziska",
@@ -37,7 +38,7 @@ export default [
     name: "Kirill",
     maskImage: require("./kirill-mask.jpeg"),
     image: require("./kirill.jpeg"),
-    website: "https://pimenov.cc/ ",
+    website: "https://pimenov.cc/",
   },
   {
     name: "Raul",

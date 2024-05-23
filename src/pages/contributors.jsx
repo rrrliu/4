@@ -161,20 +161,20 @@ const Contributors = () => {
           <button
             className={`${
               title === "Team" ? "text-berlin-red underline" : ""
-            } text-lg md:text-xl mx-4 my-2 
+            } text-lg md:text-xl mx-4 my-2
           `}
             onClick={handleTeam}
           >
-            {"<<Team<<<<<<"}
+            {"<<TEAM<<<<<<<<<<<<"}
           </button>
           <button
             className={`${
               title === "Speakers" ? "text-berlin-red underline" : ""
-            } text-lg md:text-xl mx-4 my-2 
+            } text-lg md:text-xl mx-4 my-2
           `}
             onClick={handleSpeakers}
           >
-            {"<<Speakers<<<<<<"}
+            {"<<SPEAKERS<<<<<<<<"}
           </button>
           <button
             className={`${
@@ -183,25 +183,25 @@ const Contributors = () => {
           `}
             onClick={handleWorkshops}
           >
-            {"<<Workshop<Hosts<<<<<"}
+            {"<<WORKSHOPS<HOSTS<<"}
           </button>
           <button
             className={`${
               title === "Judges" ? "text-berlin-red underline" : ""
-            } text-xl md:text-xl mx-4 my-2 
+            } text-xl md:text-xl mx-4 my-2
           `}
             onClick={handleJudges}
           >
-            {"<<Judges<<<<"}
+            {"<<JUDGES<<<<<<<<<<"}
           </button>
           {/* <button
             className={`${
               title === "Mentors" ? "text-berlin-red underline" : ""
-            } text-xl md:text-2xl mx-4 my-2 
+            } text-xl md:text-2xl mx-4 my-2
           `}
             onClick={handleMentors}
           >
-            {"<<Mentors<<<"}
+            {"<<MENTORS<<<<<<<<<"}
           </button> */}
         </div>
         <div>
