@@ -41,13 +41,13 @@ const Sidebar = ({ className }) => {
         {" "}
         &lt;&lt;<span className="text-berlin-red">A</span>&lt;RT
       </a>
-      <a className="my-2" href="/face-idont">
-        {" "}
-        &lt;&lt;<span className="text-berlin-red">F</span>&lt;ACE IDON'T
-      </a>
       <a className="my-2" href="/contributors">
         {" "}
         &lt;&lt;<span className="text-berlin-red">C</span>&lt;ONTRIBUTORS
+      </a>
+      <a className="my-2" href="/face-idont">
+        {" "}
+        &lt;&lt;<span className="text-berlin-red">F</span>&lt;ACE IDON'T
       </a>
     </nav>
   );

@@ -50,7 +50,7 @@ const Layout = ({ children, showEthDiamond, className, hidden }) => {
         >
           <a className="mx-4 my-2 sm:ml-4 text-black" href="/decentralization">
             {" "}
-            &lt;&lt;<span className="text-berlin-red">D</span>&lt;EPARTMENT
+            &lt;&lt;<span className="text-berlin-red">D</span>&lt;EPARTMENT OF DECENTRALIZATION
           </a>
           <a
             className="mx-4 my-2 sm:ml-4 text-black"
@@ -67,18 +67,6 @@ const Layout = ({ children, showEthDiamond, className, hidden }) => {
           <a className="mx-4 my-2 sm:ml-4 text-black" href="/privacy-policy">
             PRIVACY &lt;&lt;<span className="text-berlin-red">P</span>&lt;OLICY
           </a>
-          {/* <a className="mx-4 my-2 sm:ml-4 text-black" href="/decentralization">
-            department of &lt;&lt;<span className="text-berlin-red">d</span>
-            &lt;ecentralization
-          </a>
-          <a
-            className="mx-4 my-2 sm:ml-4 text-black"
-            href="https://blog.dod.ngo/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            &lt;&lt;<span className="text-berlin-red">b</span>&lt;log[&#94;]
-          </a> */}
           <a className="mx-4 my-2 sm:ml-4 text-black" href="/contact">
             CONTACT &amp; &lt;&lt;<span className="text-berlin-red">I</span>
             &lt;MPRESSUM
@@ -89,7 +77,7 @@ const Layout = ({ children, showEthDiamond, className, hidden }) => {
             target="_blank"
             rel="noreferrer"
           >
-            &lt;&lt;S&lt;OURCE(&#94;)
+            &lt;&lt;S&lt;OURCE CODE(&#94;)
           </a>
         </footer>
       </div>
