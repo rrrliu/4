@@ -61,18 +61,20 @@ const Hack = () => {
                 rel="noreferrer noopener"
               >
                 Sepolia
-              </a> and{" "}
+              </a>{" "}
+              and{" "}
               <a
                 href="https://holesky.ethberlin.org/"
                 target="_blank"
                 rel="noreferrer noopener"
               >
                 Holesky
-              </a> using your Zupass semaphore identity.
+              </a>{" "}
+              using your Zupass semaphore identity.
             </li>
             <li>
-              Create an account on our Submißion tool and unlock it with your Zupass
-              semaphore identity:{" "}
+              Create an account on our Submißion tool and unlock it with your
+              Zupass semaphore identity:{" "}
               <a
                 href="https://projects.ethberlin.org"
                 target="_blank"
@@ -291,9 +293,9 @@ const Hack = () => {
             subscription in your account.
           </p>
           <p>
-            You will require this PCD for the faucets (if needed) and the final
-            submission of your hackathon project as well as voting on other
-            people's projects after the hackathon concluded.
+            You will use this PCD for claiming testnet ETH on faucets,
+            submitting your hackathon project, and for voting on other people's
+            projects after the hackathon concludes.
           </p>
         </div>
         <div id="connect">
@@ -834,10 +836,18 @@ const Hack = () => {
             <h2 className="text-2xl mt-8 font-bold">After the Hackathon</h2>
             <h3 className="text-xl mt-6 font-bold">Voting</h3>
             <p>
-              In addition, all submissions will be reviewed by you, all
-              ETHBerlin attendees, after the hackathon! Within a one week time
-              window you will be able vote on the overall winner. The voting
-              process will be explained soon.
+              In addition, submissions will be anonymously reviewed by you, all
+              ETHBerlin attendees, after the hackathon!
+            </p>
+            <p>
+              To ensure that you're eligible to vote on submissions, please make
+              sure you have claimed your zero-knowledge proof on Zupass (
+              <a href="#zupass">instructions</a>). If you have not done so
+              before Sunday at 11:30, you may be unable to vote.
+            </p>
+            <p>
+              The link for voting will be available on Sunday the 26th, at
+              12:00.
             </p>
           </div>
           <div id="party">
