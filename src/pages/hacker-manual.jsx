@@ -836,18 +836,20 @@ const Hack = () => {
             <h2 className="text-2xl mt-8 font-bold">After the Hackathon</h2>
             <h3 className="text-xl mt-6 font-bold">Voting</h3>
             <p>
-             To determine the winner of the hackers' choice award, submissions
-             will be anonymously reviewed by you, all ETHBerlin attendees, after the hackathon!
+              To determine the winner of the Hackers' Choice award, submissions
+              will be anonymously reviewed by you, all ETHBerlin attendees,
+              after the hackathon!
             </p>
             <p>
-              Please make sure you have claimed your zero-knowledge proof on Zupass
-              (<a href="#zupass">instructions</a>) in oder to be eligible to vote
-              on submissions. If you have not done so before Sunday at 11:30,
-              you may be unable to vote.
+              Please make sure you have claimed your zero-knowledge proof on
+              Zupass (<a href="#zupass">instructions</a>) in order to be
+              eligible to vote on submissions. If you have not done so before
+              Sunday at 11:30, you may be unable to vote.
             </p>
             <p>
               The link for voting will be available on Sunday the 26th, at
-              12:00. The poll will be up for one week and will close on Monday, 27th of May.
+              12:00. The poll will be up for one week and will close on Monday,
+              27th of May.
             </p>
           </div>
           <div id="party">
