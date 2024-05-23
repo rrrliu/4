@@ -16,6 +16,23 @@ const Venue = () => {
         </h1>
         <div className="">
           <p className="mt-4">
+            The venue will be the same as every year. This year it is called{" "}
+            <a
+              href="https://cic.com/berlin/"
+              target="_blank"
+              rel="noreferrer noopener"
+            >CIC Innovation Campus</a>{" "}
+            (previously: Factory Berlin). Address:{" "}
+            <a
+              href="https://nominatim.openstreetmap.org/ui/search.html?q=Lohmuehlenstra%C3%9Fe+65+12435+Berlin"
+              target="_blank"
+              rel="noreferrer noopener"
+            >Lohmühlenstraße 65, 12435 Berlin</a>.
+          </p>
+          <p className="mt-4">
+            Preregistration starts at 12pm on Friday. Doors open at 4pm on Friday.
+          </p>
+          <p className="mt-4">
             You have access to almost the entire venue for ETHBerlin04. Go
             explore, find all experiences, eat at the restaurant, chill in the
             cinema or discover the best rooms for hacking. This venue map will

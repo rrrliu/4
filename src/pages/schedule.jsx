@@ -427,12 +427,8 @@ const Program = () => {
         <div className="">
           <p className="mt-4">
             Welcome to <ETHBerlin />! If you have the chance, please claim your
-            badge early during the day outside the venue to avoid long queues in
+            badge early during preregistration at the venue to avoid long queues in
             the evening.
-          </p>
-          <p>
-            This is a just an OVERVIEW of the schedule. Full schedule will be
-            released.{" "}
           </p>
           {/* Use top: -1px to detect stickyness https://davidwalsh.name/detect-sticky */}
 
@@ -477,25 +473,25 @@ const Program = () => {
                 startTime="12:00"
                 endTime="16:00"
                 title="Pre-registration"
-                eventLocations={[]}
+                eventLocations={[locations.giftShop]}
               />
               <ProgramItem
                 dayStr="2024-05-24"
                 startTime="16:00"
                 title="Registration"
-                eventLocations={[]}
+                eventLocations={[locations.giftShop]}
               />
               <ProgramItem
                 dayStr="2024-05-24"
                 startTime="16:00"
                 title="Doors open"
-                eventLocations={[]}
+                eventLocations={[locations.yard0]}
               />
               <SpeechItem
                 dayStr="2024-05-24"
                 startTime="16:30"
                 endTime="17:00"
-                title="Talk: Title TBA"
+                title="Talk: We need Censorships"
                 speakerName="Fatemeh Fannizadeh (Swarm)"
                 photo={fat}
                 eventLocations={[locations.lexis]}
@@ -544,7 +540,7 @@ const Program = () => {
                 startTime="19:00"
                 endTime="19:30"
                 title="Hacker Team Finding Session"
-                eventLocations={[locations.lexis]}
+                eventLocations={[locations.yard0]}
               />
               <ProgramItem
                 dayStr="2024-05-24"
@@ -572,6 +568,16 @@ const Program = () => {
                 photo={austin}
                 eventLocations={[locations.lexis]}
               />
+              {isExtravaganza && (
+                <ProgramItem
+                  dayStr="2024-05-24"
+                  startTime="20:00"
+                  endTime="21:00"
+                  title="Privacy Corner: Project Ideation Session"
+                  className={"text-berlin-red"}
+                  eventLocations={[locations.library]}
+                />
+              )}
               <SpeechItem
                 dayStr="2024-05-24"
                 startTime="20:15"
@@ -585,7 +591,7 @@ const Program = () => {
                       building different use-cases such as identity,
                       attestations, permissions and messaging. For example
                       WalletConnect built this app called Web3Inbox to aggregate
-                      notifications for multiple dapps and it’s based on SIWE.
+                      notifications for multiple dapps and it's based on SIWE.
                       Additionally there are other systems where you can use
                       attestations to build roots of trust with SIWE that
                       generate CACAOs (CAIP-74) to build dapps offchain. Finally
@@ -737,6 +743,16 @@ const Program = () => {
               />
             )}
             {isExtravaganza && (
+              <ProgramItem
+                dayStr="2024-05-25"
+                startTime="12:00"
+                endTime="18:00"
+                className={"text-berlin-red"}
+                title="Screenprinting and Matcha"
+                eventLocations={[locations.library]}
+              />
+            )}
+            {isExtravaganza && (
               <SpeechItem
                 dayStr="2024-05-25"
                 startTime="12:00"
@@ -813,6 +829,16 @@ const Program = () => {
                 title="Sound healing practice"
                 className={"text-berlin-red"}
                 eventLocations={[locations.wellnessRoom]}
+              />
+            )}
+            {isExtravaganza && (
+              <ProgramItem
+                dayStr="2024-05-25"
+                startTime="16:00"
+                endTime="17:00"
+                title="Privacy Corner: Project Pitches and Feedback Session"
+                className={"text-berlin-red"}
+                eventLocations={[locations.library]}
               />
             )}
             {isExtravaganza && (
@@ -1072,7 +1098,7 @@ Then we will look at tools and techniques we can use to govern and sustain crypt
                     </p>
                     <p>
                       {" "}
-                      This talk chronicles Idena’s experiment in Proof of
+                      This talk chronicles Idena's experiment in Proof of
                       Personhood from launch in August 2019 to a crisis in May
                       2022. We show how despite verifying humans, hidden pools
                       rapidly emerged—some cooperative, but most controlled by
@@ -1083,7 +1109,7 @@ Then we will look at tools and techniques we can use to govern and sustain crypt
                       unique identities, the protocol fractured into hidden
                       subnetworks vying for control over an economic pie with
                       economies of scale trending towards oligopoly, undermining
-                      the protocol’s security and ambitions for democratic
+                      the protocol's security and ambitions for democratic
                       governance (one-person, one-vote) and UBI rewards
                       (one-person, one reward). By giving humans economic
                       incentives to periodically differentiate themselves from
@@ -1104,10 +1130,16 @@ Then we will look at tools and techniques we can use to govern and sustain crypt
                 dayStr="2024-05-26"
                 startTime="16:25"
                 endTime="16:55"
-                title="Talk: Title TBA"
+                title="Talk: The Fight for Privacy"
                 speakerName={"Ameen Soleimani (0xbow)"}
                 photo={ameen}
                 eventLocations={[locations.lexis]}
+              />
+              <ProgramItem
+                dayStr="2024-05-26"
+                startTime="16:30"
+                title="Upper floors close"
+                eventLocations={[]}
               />
               <SpeechItem
                 dayStr="2024-05-26"
@@ -1150,9 +1182,30 @@ Then we will look at tools and techniques we can use to govern and sustain crypt
                 dayStr="2024-05-26"
                 startTime="19:00"
                 endTime="20:00"
-                title="Closing aperitif, snacks & mingle with DJ"
+                title={"Closing aperitif, snacks & mingle with DJ"}
                 eventLocations={[locations.yard0]}
               />
+              <ProgramItem
+                dayStr="2024-05-26"
+                startTime="19:00"
+                endTime="20:00"
+                title={
+                  <span className="inline-flex items-center">
+                    YaNKeY{" "}
+                    <a
+                      href="https://on.soundcloud.com/cEYw4"
+                      className="ml-2 inline-block opacity-70 hover:opacity-100 text-berlin-red hover:text-berlin-red"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <ImSoundcloud />
+                    </a>
+                  </span>
+                }
+                className="ml-12"
+                eventLocations={[locations.yard0]}
+              />
+
               <ProgramItem
                 dayStr="2024-05-26"
                 startTime="20:00"

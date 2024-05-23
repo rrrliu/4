@@ -83,8 +83,8 @@ export default [
       name: "Factory DAO",
       url: "https://www.factorydao.org/",
     },
-    image: require("./drnick.jpeg"),
-    // maskImage: require("./drnick-mask.jpeg"),
+    image: require("./nick.jpeg"),
+    maskImage: require("./nick-mask.jpeg"),
     twitter: "https://twitter.com/DrNickA",
   },
   {
@@ -237,7 +237,7 @@ export default [
       url: "https://ethereum.foundation",
     },
     image: require("./nuno.jpeg"),
-    // maskImage: require("./nuno-mask.jpeg"),
+    maskImage: require("./nuno-mask.jpeg"),
     twitter: "https://twitter.com/nloureiro",
     github: "https://github.com/nloureiro",
   },
@@ -276,7 +276,7 @@ export default [
       url: "https://celestia.org/",
     },
     image: require("./rene.jpeg"),
-    // maskImage: require("./rene-mask.jpeg"),
+    maskImage: require("./rene-mask.jpeg"),
   },
   {
     name: "Rose Regina Lawrence",

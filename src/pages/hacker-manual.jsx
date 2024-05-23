@@ -53,8 +53,34 @@ const Hack = () => {
                 zupass.org
               </a>
             </li>
-            {/* @TO DO Link Faucets */}
-            {/* @TO DO Link Submissions */}
+            <li>
+              Get testnet Ether for{" "}
+              <a
+                href="https://sepolia.ethberlin.org/"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                Sepolia
+              </a> and{" "}
+              <a
+                href="https://holesky.ethberlin.org/"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                Holesky
+              </a> using your Zupass semaphore identity.
+            </li>
+            <li>
+              Create an account on our Submißion tool and unlock it with your Zupass
+              semaphore identity:{" "}
+              <a
+                href="https://projects.ethberlin.org"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                projects.ethberlin.org
+              </a>
+            </li>
             <li>
               Visit this page frequently as we update the manual regularly.
             </li>
@@ -89,7 +115,7 @@ const Hack = () => {
               <a href="#faucets">Faucets for Sepolia and Holesky</a>
             </li>
             <li>
-              <a href="#prizes-bounties">Prizes and Bounties </a>
+              <a href="#tracks-prizes">Tracks and Prizes</a>
             </li>
             <li>
               <a href="#mentors">Getting Help from Mentors</a>
@@ -373,8 +399,8 @@ const Hack = () => {
             any of your addresses. Thank you, pk910 &lt;3
           </p>
         </div>
-        <div id="prizes-bounties">
-          <h3 className="text-xl mt-6 font-bold">Prizes and Bounties</h3>
+        <div id="tracks-prizes">
+          <h3 className="text-xl mt-6 font-bold">Tracks and Prizes</h3>
           <h4 className="text-l mt-4 font-bold">Track Awards</h4>
           <div>
             The track awards are centered around themes that align with our{" "}
@@ -523,7 +549,7 @@ const Hack = () => {
                   Friday from hacking start (19:00) until midnight
                 </li>
                 <li>Saturday from 08:00 to midnight </li>
-                <li> Sunday from 08:00 to submission deadline (12:00)</li>
+                <li> Sunday from 08:00 to submission deadline (11:30)</li>
               </ul>
             </li>
           </ul>
@@ -552,19 +578,275 @@ const Hack = () => {
             feedback on something.
           </p>
           <div id="submissions">
-            <h3 className="text-xl mt-6 font-bold">Submissions</h3>
-            <p>The submissions tool will be published soon.</p>
+            <h3 className="text-2xl mt-6 font-bold">Submissions</h3>
+            <p>
+              This year thanks to our amazing Kirill, we've built our own tool
+              for submissions and judging. The tool is open source, simple to
+              use and should make the job of judging and tallying scores simple
+              and fast.
+            </p>
+            <p>
+              If you run into any problems or have any feedback it would be much
+              appreciated if you would open an issue{" "}
+              <a
+                href="https://github.com/ethb3rlin/Submi-ions/issues"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                in the github repo
+              </a>
+              .
+            </p>
+            <b>The general flow for using the tool is as follows:</b>
+            <ul>
+              <li>
+                Go to{" "}
+                <a
+                  href="https://projects.ethberlin.org/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  projects.ethberlin.org
+                </a>{" "}
+                and sign in with your Zupass credentials to receive your role as
+                "hacker".
+              </li>
+              <li>Create or join an existing team</li>
+              <li>Now you can submit projects and join team.</li>
+              <li>
+                To submit a project click the "Submit a project" button in the
+                top bar.
+              </li>
+              <li>
+                There is a simple template with information you should add, but
+                feel free to add whatever additional information you find
+                relevant for your submission.
+              </li>
+              <li>
+                Make sure to submit everything before the deadline Sunday 26th
+                at 11:30, when submissions close.
+              </li>
+              <li>
+                Once submissions are closed keep an eye on the general matrix
+                channel, where we will provide further instructions for when
+                your team will have to present to the judges.
+              </li>
+            </ul>
+            <b>Some things to keep in mind:</b>
+            <ul>
+              <li>
+                Put as much information into the Github, Radicle, or whatever
+                code collaboration platform you use, about the project so that
+                judges and other hackers only need to look in one place to learn
+                as much as possible about the project.
+              </li>
+              <li>
+                Dedicate some time to make a crisp and precice presentation and
+                don't forget to submit it too.
+              </li>
+              <li>
+                Make sure to select the track that fits best to your project.
+              </li>
+            </ul>
           </div>
           <div id="judging">
-            <h3 className="text-xl mt-6 font-bold">Judging</h3>
-            <p>The judging process will be documented soon.</p>
+            <h3 className="text-2xl mt-6 font-bold">Judging</h3>
+            <h4 className="text-l mt-4 font-bold">
+              Judging Timeline on Sunday
+            </h4>
+            <ul>
+              <li>11:30 AM: Hackathon submission deadline</li>
+              <li>12 PM - 4:30 PM: Pitching sessions</li>
+              <li className="pl-4">
+                {" "}
+                Hacking teams will pitch in a 10 min rhythm
+              </li>
+              <li className="pl-4">
+                {" "}
+                Judges will have 3 min to pre-review your submission
+              </li>
+              <li className="pl-4 font-bold"> You have 3 min for your pitch</li>
+              <li className="pl-4"> 2 min Q&A after the pitch</li>
+              <li>5:30 PM - 7 PM: Closing ceremony with winner pitches</li>
+              <li className="pl-4">
+                The winning teams of each track, each excellence award and the
+                meta award will present briefly at the closing ceremony. Be
+                prepared to come to the stage and describe what your project
+                does (similar to your pitch for the judges).
+              </li>
+            </ul>
+            <h4 className="text-l mt-4 font-bold">
+              When and where do you present in front of the Judges?
+            </h4>
+            <p>
+              Judging takes place on the 1st floor. There are six clearly marked
+              judging rooms located directly next to each other. Volunteers can
+              help you find the way! Once the hacking phase is over and the
+              judging phase begins, you can check the Submissions Tool to find
+              out the room and time for your team's presentation.
+            </p>
+            <h4 className="text-lg mt-4 font-bold">Judging Criteria</h4>
+            <h5 className="mt-4 font-bold">The 4 Track Awards</h5>
+            <p>
+              You will pitch your project in front of a group of 3 judges. There
+              will be a Technical Judge, a Product Judge, and a Concept Judge.
+              They will each focus on different parts of your project.
+            </p>
+            <h5 className="mt-4 font-bold">Technical Judges:</h5>
+            <ul>
+              <li>Technical complexity and quality</li>
+              <ul className="ml-6">
+                <li>What technical challenges does the project address?</li>
+                <li>
+                  Is the code and architecture well-designed and high quality?
+                </li>
+              </ul>
+              <li>Implementation and execution</li>
+              <ul className="ml-6">
+                <li>Is the code efficient and optimized?</li>
+                <li>Is the codebase clean and maintainable?</li>
+              </ul>
+              <li>Functionality</li>
+              <ul className="ml-6">
+                <li>How well does the project work?</li>
+                <li>
+                  Is the solution complete and functional, or does the team have
+                  a clear plan on how they would finish it?
+                </li>
+              </ul>
+              <li>Innovation and creativity</li>
+              <ul className="ml-6">
+                <li>Does the project use new technologies?</li>
+                <li>Is there a creative approach to problem-solving?</li>
+              </ul>
+            </ul>
+            <h5 className="mt-4 font-bold">Product Judges:</h5>
+            <ul>
+              <li>Innovation and creativity</li>
+              <ul className="ml-6">
+                <li>
+                  Is this something completely new or are there already existing
+                  projects working on a similar scope? What is the
+                  differentiator?
+                </li>
+                <li>Does the project demonstrate creative problem-solving?</li>
+              </ul>
+              <li>Practicality and feasibility</li>
+              <ul className="ml-6">
+                <li>
+                  Does the project have the potential for real-world impact?
+                </li>
+                <li>Is the implementation feasible in practice?</li>
+              </ul>
+              <li>Communication and presentation</li>
+              <ul className="ml-6">
+                <li>
+                  Is the team able to clearly communicate the project and its
+                  value?
+                </li>
+              </ul>
+            </ul>
+            <h5 className=" mt-4 font-bold">Concept Judges:</h5>
+            <ul>
+              <li>Idea, concept, and vision</li>
+              <ul className="ml-6">
+                <li>Does the concept have a strong vision?</li>
+                <li>What is the wow or fun factor of the idea?</li>
+                <li>How well does the project fit the hackathon track?</li>
+              </ul>
+              <li>Manifesto and values</li>
+              <ul className="ml-6">
+                <li>
+                  How well does the project align with the overall theme of the
+                  hackathon and with the stated values in the ETHBerlin04
+                  Manifesto?
+                </li>
+                <li>What is the impact and purpose of the project?</li>
+              </ul>
+            </ul>
+            <h5 className="mt-4 font-bold">The Meta Award</h5>
+            <p>
+              This track is being judged by ETHBerlin core team members. Apart
+              from regular technicality and usability, the Meta Award judges
+              will look at:
+            </p>
+            <ul>
+              <li>Improvement of the ETHBerlin experience</li>
+              <ul className="ml-6">
+                <li>
+                  How does the project improve the overall ETHBerlin experience?
+                </li>
+                <li>Does the project address specific pain points?</li>
+                <li>
+                  How well does the project align with the values and goals of
+                  ETHBerlin?
+                </li>
+              </ul>
+              <li>Practicality and scalability</li>
+              <ul className="ml-6">
+                <li>
+                  How well does the project integrate with existing tools and
+                  infrastructure?
+                </li>
+                <li>
+                  How does the project perform under typical hackathon use
+                  cases?
+                </li>
+              </ul>
+              <li>Creativity</li>
+              <ul className="ml-6">
+                <li>
+                  How creative is the approach to solving ETHBerlin-specific
+                  challenges?
+                </li>
+                <li>
+                  Is the project original or does it enhance existing tools in
+                  innovative ways?
+                </li>
+              </ul>
+              <li>Contributions</li>
+              <ul className="ml-6">
+                <li>
+                  Does the contribution address a critical issue or add a
+                  valuable feature?
+                </li>
+                <li>
+                  How will users or developers benefit from this contribution?
+                </li>
+                <li>Is the code well-written, clean, and maintainable?</li>
+                <li>Is the contribution well-documented?</li>
+                <li>
+                  How well does the contribution integrate with the existing
+                  codebase?
+                </li>
+              </ul>
+            </ul>
+            <h5 className="mt-4 font-bold">The 3 Excellence Awards</h5>
+            <p>
+              You will be able to select what you are most proud of about your
+              submission: the smart contracts, the social impact or the user
+              experience. A group of expert judges per excellence-award will
+              digitally review and judge the respective projects. You don’t have
+              to pitch in front of the excellence award judges.
+            </p>
           </div>
           <div id="voting">
             <h2 className="text-2xl mt-8 font-bold">After the Hackathon</h2>
             <h3 className="text-xl mt-6 font-bold">Voting</h3>
-            <p>The voting process will be explained soon.</p>
+            <p>
+              In addition, all submissions will be reviewed by you, all
+              ETHBerlin attendees, after the hackathon! Within a one week time
+              window you will be able vote on the overall winner. The voting
+              process will be explained soon.
+            </p>
           </div>
-          <div id="party"></div>
+          <div id="party">
+            <h3 className="text-xl mt-6 font-bold">After party</h3>
+            <p>
+              It would not be ETHBerlin without an after party.{" "}
+              <a href="/experiences#party">Read more</a>.
+            </p>
+          </div>
         </div>
 
         <VenueMapModal
