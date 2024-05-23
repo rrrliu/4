@@ -505,7 +505,7 @@ const Hack = () => {
             </a>
             .
           </div>
-          <h4 className="text-l mt-4 font-bold">The Hacker's Favorite Award</h4>
+          <h4 className="text-l mt-4 font-bold">The Hackers' Choice Award</h4>
           <div className="mt-2">
             A prize to be picked by the ETHBerlin hackers. After the hackathon
             weekend, hackers will review all the projects and cast their votes
