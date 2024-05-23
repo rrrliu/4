@@ -427,12 +427,8 @@ const Program = () => {
         <div className="">
           <p className="mt-4">
             Welcome to <ETHBerlin />! If you have the chance, please claim your
-            badge early during the day outside the venue to avoid long queues in
+            badge early during preregistration at the venue to avoid long queues in
             the evening.
-          </p>
-          <p>
-            This is a just an OVERVIEW of the schedule. Full schedule will be
-            released.{" "}
           </p>
           {/* Use top: -1px to detect stickyness https://davidwalsh.name/detect-sticky */}
 
@@ -595,7 +591,7 @@ const Program = () => {
                       building different use-cases such as identity,
                       attestations, permissions and messaging. For example
                       WalletConnect built this app called Web3Inbox to aggregate
-                      notifications for multiple dapps and it’s based on SIWE.
+                      notifications for multiple dapps and it's based on SIWE.
                       Additionally there are other systems where you can use
                       attestations to build roots of trust with SIWE that
                       generate CACAOs (CAIP-74) to build dapps offchain. Finally
@@ -1102,7 +1098,7 @@ Then we will look at tools and techniques we can use to govern and sustain crypt
                     </p>
                     <p>
                       {" "}
-                      This talk chronicles Idena’s experiment in Proof of
+                      This talk chronicles Idena's experiment in Proof of
                       Personhood from launch in August 2019 to a crisis in May
                       2022. We show how despite verifying humans, hidden pools
                       rapidly emerged—some cooperative, but most controlled by
@@ -1113,7 +1109,7 @@ Then we will look at tools and techniques we can use to govern and sustain crypt
                       unique identities, the protocol fractured into hidden
                       subnetworks vying for control over an economic pie with
                       economies of scale trending towards oligopoly, undermining
-                      the protocol’s security and ambitions for democratic
+                      the protocol's security and ambitions for democratic
                       governance (one-person, one-vote) and UBI rewards
                       (one-person, one reward). By giving humans economic
                       incentives to periodically differentiate themselves from
@@ -1134,7 +1130,7 @@ Then we will look at tools and techniques we can use to govern and sustain crypt
                 dayStr="2024-05-26"
                 startTime="16:25"
                 endTime="16:55"
-                title="Talk: Title TBA"
+                title="Talk: The Fight for Privacy"
                 speakerName={"Ameen Soleimani (0xbow)"}
                 photo={ameen}
                 eventLocations={[locations.lexis]}
