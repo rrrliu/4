@@ -37,7 +37,7 @@ import { FaTwitter } from "react-icons/fa";
 import { ImSoundcloud } from "react-icons/im";
 
 const currentDate = new Date();
-// const currentDate = new Date("2024-05-26T12:30:00+02:00");
+// const currentDate = new Date("2024-05-26T01:00:00+02:00");
 
 const ProgramItem = ({
   title,
@@ -47,6 +47,7 @@ const ProgramItem = ({
   startTime,
   endTime,
   className,
+  isExtravaganza,
 }) => {
   // ISO Format: 2024-05-24T00:09:00+02:00
   const startDate = new Date(dayStr + "T" + startTime + ":00+02:00");
@@ -56,7 +57,7 @@ const ProgramItem = ({
 
   return (
     <li
-      className={`${
+      className={`${isExtravaganza ? "text-berlin-red" : ""} ${
         currentDate > endDate
           ? "text-gray-300"
           : currentDate > startDate
@@ -71,12 +72,12 @@ const ProgramItem = ({
       {title}{" "}
       {eventLocations.map((loc) => (
         <button
-          className={`${
+          className={`text-berlin-red ${
             currentDate > endDate
               ? "text-gray-300"
               : currentDate > startDate
               ? "font-bold animate-pulse-faster"
-              : "text-berlin-red"
+              : className
           } text-sm`}
           onClick={() => {
             loc.handler();
@@ -219,7 +220,7 @@ const Program = () => {
   const [activeMap, setActiveMap] = React.useState(groundFloor);
   const [activeRoomClass, setActiveRoomClass] = React.useState("lexis");
   const [activeMapName, setActiveMapName] = React.useState("Ground Floor (#0)");
-  const [isExtravaganza, setIsExtravaganza] = React.useState(false);
+  const [extravaganzaActive, setExtravaganzaActive] = React.useState(false);
   const [isSticky, setIsSticky] = React.useState(false);
 
   let toggleRef = React.useRef(null);
@@ -447,16 +448,16 @@ const Program = () => {
                   id="toogleA"
                   type="checkbox"
                   className="sr-only"
-                  onChange={() => setIsExtravaganza((prev) => !prev)}
+                  onChange={() => setExtravaganzaActive((prev) => !prev)}
                 />
                 <div
                   className={`w-10 h-4 ${
-                    isExtravaganza ? "bg-red-500" : "bg-gray-400"
+                    extravaganzaActive ? "bg-red-500" : "bg-gray-400"
                   } rounded-full shadow-inner`}
                 ></div>
                 <div
                   className={`absolute w-6 h-6 rounded-full shadow -left-1 -top-1 transition ${
-                    isExtravaganza
+                    extravaganzaActive
                       ? "translate-x-full bg-red-300"
                       : "bg-gray-200"
                   }`}
@@ -549,14 +550,15 @@ const Program = () => {
                 title="Dinner"
                 eventLocations={[locations.lexis]}
               />
-              {isExtravaganza && (
+              {extravaganzaActive && (
                 <ProgramItem
                   dayStr="2024-05-24"
-                  className={"text-berlin-red"}
+                  isExtravaganza
                   startTime="19:00"
                   endTime="23:59"
                   title="Art Exhibition: co-create"
                   eventLocations={[locations.artExhibition]}
+                  isExtravaganza
                 />
               )}
               <SpeechItem
@@ -568,14 +570,15 @@ const Program = () => {
                 photo={austin}
                 eventLocations={[locations.lexis]}
               />
-              {isExtravaganza && (
+              {extravaganzaActive && (
                 <ProgramItem
                   dayStr="2024-05-24"
                   startTime="20:00"
                   endTime="21:00"
                   title="Privacy Corner: Project Ideation Session"
-                  className={"text-berlin-red"}
+                  isExtravaganza
                   eventLocations={[locations.library]}
+                  isExtravaganza
                 />
               )}
               <SpeechItem
@@ -714,14 +717,14 @@ const Program = () => {
               title="Breakfast"
               eventLocations={[locations.restaurant]}
             />
-            {isExtravaganza && (
+            {extravaganzaActive && (
               <ProgramItem
                 dayStr="2024-05-25"
                 startTime="10:00"
                 endTime="11:30"
                 title="Kundalini yoga"
-                className={"text-berlin-red"}
                 eventLocations={[locations.wellnessRoom]}
+                isExtravaganza
               />
             )}
             <SpeechItem
@@ -732,32 +735,32 @@ const Program = () => {
               description="Are you stuck, looking for another team member or want feedback on your idea? Join this session to pitch your project on stage or learn more about the projects others are working on!"
               eventLocations={[locations.lexis]}
             />
-            {isExtravaganza && (
+            {extravaganzaActive && (
               <ProgramItem
                 dayStr="2024-05-25"
                 startTime="11:00"
                 endTime="23:59"
-                className={"text-berlin-red"}
                 title="Art Exhibition: co-create"
                 eventLocations={[locations.artExhibition]}
+                isExtravaganza
               />
             )}
-            {isExtravaganza && (
+            {extravaganzaActive && (
               <ProgramItem
                 dayStr="2024-05-25"
                 startTime="12:00"
                 endTime="18:00"
-                className={"text-berlin-red"}
                 title="Screenprinting and Matcha"
                 eventLocations={[locations.library]}
+                isExtravaganza
               />
             )}
-            {isExtravaganza && (
+            {extravaganzaActive && (
               <SpeechItem
                 dayStr="2024-05-25"
                 startTime="12:00"
                 endTime="13:20"
-                className={"text-berlin-red"}
+                isExtravaganza
                 title="Panel - Decentralized Art Organisation"
                 speakerName="Vincent Trasov, Benny Giang"
                 // photo={richard}
@@ -781,22 +784,22 @@ const Program = () => {
               title="Lunch"
               eventLocations={[locations.restaurant]}
             />
-            {isExtravaganza && (
+            {extravaganzaActive && (
               <ProgramItem
                 dayStr="2024-05-25"
                 startTime="13:00"
                 endTime="15:00"
                 title="Reiki practitioner available"
-                className={"text-berlin-red"}
+                isExtravaganza
                 eventLocations={[locations.wellnessRoom]}
               />
             )}
-            {isExtravaganza && (
+            {extravaganzaActive && (
               <SpeechItem
                 dayStr="2024-05-25"
                 startTime="13:30"
                 endTime="14:50"
-                className={"text-berlin-red"}
+                isExtravaganza
                 title="Panel - Art after NFTs"
                 speakerName="Joan Heemskerk, Billy Rennekamp"
                 // photo={richard}
@@ -821,38 +824,38 @@ const Program = () => {
               description="Check mentor area for detailed schedule!"
               eventLocations={[locations.nodeCafe]}
             />
-            {isExtravaganza && (
+            {extravaganzaActive && (
               <ProgramItem
                 dayStr="2024-05-25"
                 startTime="15:00"
                 endTime="16:30"
                 title="Sound healing practice"
-                className={"text-berlin-red"}
+                isExtravaganza
                 eventLocations={[locations.wellnessRoom]}
               />
             )}
-            {isExtravaganza && (
+            {extravaganzaActive && (
               <ProgramItem
                 dayStr="2024-05-25"
                 startTime="16:00"
                 endTime="17:00"
                 title="Privacy Corner: Project Pitches and Feedback Session"
-                className={"text-berlin-red"}
+                isExtravaganza
                 eventLocations={[locations.library]}
               />
             )}
-            {isExtravaganza && (
+            {extravaganzaActive && (
               <ProgramItem
                 dayStr="2024-05-25"
                 startTime="17:00"
                 endTime="19:00"
                 title="Yoga flow + Sound Bath"
-                className={"text-berlin-red"}
+                isExtravaganza
                 eventLocations={[locations.wellnessRoom]}
               />
             )}
-            {isExtravaganza && (
-              <div className="text-berlin-red">
+            {extravaganzaActive && (
+              <div isExtravaganza>
                 <ProgramItem
                   dayStr="2024-05-25"
                   startTime="17:00"
@@ -861,96 +864,150 @@ const Program = () => {
                   title="DJs in Courtyard 1"
                   eventLocations={[locations.yard0]}
                 />
-                <ProgramItem
-                  dayStr="2024-05-25"
-                  startTime="17:00"
-                  endTime="19:00"
-                  title={
-                    <span className="inline-flex items-center">
-                      Jommi{" "}
-                      <a
-                        href="https://twitter.com/joakimhi"
-                        className="ml-2 inline-block opacity-70 hover:opacity-100 text-berlin-red hover:text-berlin-red"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <FaTwitter />
-                      </a>
-                    </span>
-                  }
-                  eventLocations={[locations.yard0]}
-                  className="ml-12"
-                />
-                <ProgramItem
-                  dayStr="2024-05-25"
-                  startTime="19:00"
-                  endTime="21:00"
-                  title={
-                    <span className="inline-flex items-center">
-                      Anna{" "}
-                      <a
-                        href="https://soundcloud.com/innermost3000"
-                        className="ml-2 inline-block opacity-70 hover:opacity-100 text-berlin-red hover:text-berlin-red"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <ImSoundcloud />
-                      </a>
-                      <a
-                        href="https://twitter.com/annmehr"
-                        className="ml-2 inline-block opacity-70 hover:opacity-100 text-berlin-red hover:text-berlin-red"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <FaTwitter />
-                      </a>
-                    </span>
-                  }
-                  eventLocations={[locations.yard0]}
-                  className="ml-12"
-                />
-                <ProgramItem
-                  dayStr="2024-05-25"
-                  startTime="21:00"
-                  endTime="23:00"
-                  title={
-                    <span className="inline-flex items-center">
-                      Manu +{" "}
-                      <a
-                        href="https://twitter.com/blockravers"
-                        className="ml-2 inline-flex items-center opacity-70 hover:opacity-100 text-berlin-red hover:text-berlin-red"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        @blockravers <FaTwitter className="ml-2" />
-                      </a>
-                    </span>
-                  }
-                  eventLocations={[locations.yard0]}
-                  className="ml-12"
-                />
-                <ProgramItem
-                  dayStr="2024-05-25"
-                  endDayStr="2024-05-26"
-                  startTime="23:00"
-                  endTime="01:00"
-                  title={
-                    <span className="inline-flex items-center">
-                      Manuel{" "}
-                      <a
-                        href="https://soundcloud.com/umcharra"
-                        className="ml-2 inline-block opacity-70 hover:opacity-100 text-berlin-red hover:text-berlin-red"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <ImSoundcloud />
-                      </a>
-                    </span>
-                  }
-                  eventLocations={[locations.yard0]}
-                  className="ml-12"
-                />
+                <div className="ml-12">
+                  <ProgramItem
+                    dayStr="2024-05-25"
+                    startTime="17:00"
+                    endTime="19:00"
+                    title={
+                      <span className="inline-flex items-center">
+                        Jommi{" "}
+                        <a
+                          href="https://twitter.com/joakimhi"
+                          className="ml-2 inline-block opacity-70 hover:opacity-100 text-berlin-red hover:text-berlin-red"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <FaTwitter />
+                        </a>
+                      </span>
+                    }
+                    eventLocations={[locations.yard0]}
+                  />
+                  <ProgramItem
+                    dayStr="2024-05-25"
+                    startTime="19:00"
+                    endTime="21:00"
+                    title={
+                      <span className="inline-flex items-center">
+                        Anna{" "}
+                        <a
+                          href="https://soundcloud.com/innermost3000"
+                          className="ml-2 inline-block opacity-70 hover:opacity-100 text-berlin-red hover:text-berlin-red"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <ImSoundcloud />
+                        </a>
+                        <a
+                          href="https://twitter.com/annmehr"
+                          className="ml-2 inline-block opacity-70 hover:opacity-100 text-berlin-red hover:text-berlin-red"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <FaTwitter />
+                        </a>
+                      </span>
+                    }
+                    eventLocations={[locations.yard0]}
+                  />
+                  <ProgramItem
+                    dayStr="2024-05-25"
+                    startTime="21:00"
+                    endTime="23:00"
+                    title={
+                      <span className="inline-flex items-center">
+                        Manu +{" "}
+                        <a
+                          href="https://twitter.com/blockravers"
+                          className="ml-2 inline-flex items-center opacity-70 hover:opacity-100 text-berlin-red hover:text-berlin-red"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          @blockravers <FaTwitter className="ml-2" />
+                        </a>
+                      </span>
+                    }
+                    eventLocations={[locations.yard0]}
+                  />
+                  <ProgramItem
+                    dayStr="2024-05-25"
+                    endDayStr="2024-05-26"
+                    startTime="23:00"
+                    endTime="01:00"
+                    title={
+                      <span className="inline-flex items-center">
+                        Manuel{" "}
+                        <a
+                          href="https://soundcloud.com/umcharra"
+                          className="ml-2 inline-block opacity-70 hover:opacity-100 text-berlin-red hover:text-berlin-red"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <ImSoundcloud />
+                        </a>
+                      </span>
+                    }
+                    eventLocations={[locations.yard0]}
+                  />
+                </div>
               </div>
+            )}
+            {extravaganzaActive && (
+              <>
+                <ProgramItem
+                  dayStr="2024-05-25"
+                  startTime="19:15"
+                  endTime="01:40"
+                  endDayStr={"2024-05-26"}
+                  title="Cinema"
+                  eventLocations={[locations.cinema]}
+                  isExtravaganza
+                />
+                <div className="ml-12">
+                  <ProgramItem
+                    dayStr="2024-05-25"
+                    startTime="17:15"
+                    endTime="18:35"
+                    title="Terms and Conditions May Apply (Documentary, 2013)"
+                    eventLocations={[locations.cinema]}
+                    isExtravaganza
+                  />
+                  <ProgramItem
+                    dayStr="2024-05-25"
+                    startTime="18:45"
+                    endTime="20:12"
+                    title="All Creatures Welcome (Documentary, 2018)"
+                    eventLocations={[locations.cinema]}
+                    isExtravaganza
+                  />
+                  <ProgramItem
+                    dayStr="2024-05-25"
+                    startTime="20:15"
+                    endTime="22:21"
+                    title="Sneakers (Comedy/Crime, 1992)"
+                    eventLocations={[locations.cinema]}
+                    isExtravaganza
+                  />
+                  <ProgramItem
+                    dayStr="2024-05-25"
+                    startTime="22:30"
+                    endTime="23:51"
+                    title="Idiocracy (Comedy/SciFi, 2006)"
+                    eventLocations={[locations.cinema]}
+                    isExtravaganza
+                  />
+                  <ProgramItem
+                    dayStr="2024-05-25"
+                    startTime="23:59"
+                    endTime="01:40"
+                    endDayStr="2024-05-26"
+                    title="Sans Soleil (Documentary, 1983)"
+                    eventLocations={[locations.cinema]}
+                    isExtravaganza
+                  />
+                </div>
+              </>
             )}
             <ProgramItem
               dayStr="2024-05-25"
@@ -992,23 +1049,23 @@ const Program = () => {
                 title="Breakfast"
                 eventLocations={[locations.restaurant]}
               />
-              {isExtravaganza && (
+              {extravaganzaActive && (
                 <ProgramItem
                   dayStr="2024-05-26"
                   startTime="10:00"
                   endTime="10:45"
                   title="Active/dance meditation"
-                  className={"text-berlin-red"}
+                  isExtravaganza
                   eventLocations={[locations.wellnessRoom]}
                 />
               )}
-              {isExtravaganza && (
+              {extravaganzaActive && (
                 <ProgramItem
                   dayStr="2024-05-26"
                   startTime="10:45"
                   endTime="11:30"
                   title="Vibro Acoustic massage 1:1 first slot"
-                  className={"text-berlin-red"}
+                  isExtravaganza
                   eventLocations={[locations.wellnessRoom]}
                 />
               )}
@@ -1019,13 +1076,13 @@ const Program = () => {
                 className={"font-bold italic"}
                 eventLocations={[]}
               />
-              {isExtravaganza && (
+              {extravaganzaActive && (
                 <ProgramItem
                   dayStr="2024-05-26"
                   startTime="11:45"
                   endTime="12:30"
                   title="Vibro acoustic massage 1:1 2nd slot"
-                  className={"text-berlin-red"}
+                  isExtravaganza
                   eventLocations={[locations.wellnessRoom]}
                 />
               )}
@@ -1185,26 +1242,27 @@ Then we will look at tools and techniques we can use to govern and sustain crypt
                 title={"Closing aperitif, snacks & mingle with DJ"}
                 eventLocations={[locations.yard0]}
               />
-              <ProgramItem
-                dayStr="2024-05-26"
-                startTime="19:00"
-                endTime="20:00"
-                title={
-                  <span className="inline-flex items-center">
-                    YaNKeY{" "}
-                    <a
-                      href="https://on.soundcloud.com/cEYw4"
-                      className="ml-2 inline-block opacity-70 hover:opacity-100 text-berlin-red hover:text-berlin-red"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <ImSoundcloud />
-                    </a>
-                  </span>
-                }
-                className="ml-12"
-                eventLocations={[locations.yard0]}
-              />
+              <div className="ml-12">
+                <ProgramItem
+                  dayStr="2024-05-26"
+                  startTime="19:00"
+                  endTime="20:00"
+                  title={
+                    <span className="inline-flex items-center">
+                      YaNKeY{" "}
+                      <a
+                        href="https://on.soundcloud.com/cEYw4"
+                        className="ml-2 inline-block opacity-70 hover:opacity-100 text-berlin-red hover:text-berlin-red"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <ImSoundcloud />
+                      </a>
+                    </span>
+                  }
+                  eventLocations={[locations.yard0]}
+                />
+              </div>
 
               <ProgramItem
                 dayStr="2024-05-26"
