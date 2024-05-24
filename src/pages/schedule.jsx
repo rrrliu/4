@@ -56,14 +56,14 @@ const ProgramItem = ({
     : startDate;
 
   return (
-    <li
+    <div
       className={`${isExtravaganza ? "text-berlin-red" : ""} ${
         currentDate > endDate
           ? "text-gray-300"
           : currentDate > startDate
           ? "font-bold animate-pulse-faster"
           : className
-      } list-none text-lg`}
+      } list-none md:text-lg mt-1`}
     >
       <span className="fake-bold">
         <span className="text-berlin-red opacity-50">{"> "}</span>
@@ -91,7 +91,7 @@ const ProgramItem = ({
           <span className="underline">{loc.name}</span>
         </button>
       ))}
-    </li>
+    </div>
   );
 };
 
@@ -132,7 +132,7 @@ const SpeechItem = ({
         className={className}
       />
       <div
-        className={`ml-8 -mt-2 mb-4 text-sm ${
+        className={`ml-8 text-sm ${
           currentDate > endDate
             ? "text-gray-300"
             : currentDate > startDate
@@ -558,7 +558,6 @@ const Program = () => {
                   endTime="23:59"
                   title="Art Exhibition: co-create"
                   eventLocations={[locations.artExhibition]}
-                  isExtravaganza
                 />
               )}
               <SpeechItem
@@ -578,7 +577,6 @@ const Program = () => {
                   title="Privacy Corner: Project Ideation Session"
                   isExtravaganza
                   eventLocations={[locations.library]}
-                  isExtravaganza
                 />
               )}
               <SpeechItem
