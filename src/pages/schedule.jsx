@@ -63,7 +63,7 @@ const ProgramItem = ({
           : currentDate > startDate
           ? "font-bold animate-pulse-faster"
           : className
-      } list-none md:text-lg mt-1`}
+      } list-none md:text-lg mt-3`}
     >
       <span className="fake-bold">
         <span className="text-berlin-red opacity-50">{"> "}</span>
