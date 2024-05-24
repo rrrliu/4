@@ -36,8 +36,8 @@ import puja from "../assets/people/speakers/puja.jpeg";
 import { FaTwitter } from "react-icons/fa";
 import { ImSoundcloud } from "react-icons/im";
 
-const currentDate = new Date();
-// const currentDate = new Date("2024-05-26T01:00:00+02:00");
+// const currentDate = new Date();
+const currentDate = new Date("2024-05-26T01:00:00+02:00");
 
 const ProgramItem = ({
   title,

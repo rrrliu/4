@@ -468,9 +468,18 @@ const Experiences = () => {
                 href="https://infura.io/"
                 target="blank"
                 rel="noreferrer noopener"
-                className="underline ml-1"
+                className="underline ml-1 mr-1"
               >
                 Infura
+              </a>
+              &
+              <a
+                href="https://consensys.io/diligence/"
+                target="blank"
+                rel="noreferrer noopener"
+                className="underline ml-1"
+              >
+                Consensys Diligence
               </a>
             </div>
             <div className="ml-4">
@@ -541,11 +550,14 @@ const Experiences = () => {
               <LocationButton loc={locations.library} />
             </div>
             <div className="ml-4">
-              Hacker-focused safe space where you can get productive feedback
-              on your hackathon project idea, its privacy features, and general viability.
-              The Web3 Privacy team will be available throughout the weekend
-              and will host open feedback and ideation sessions.
-              For more info please see: <a href="https://c24ber.web3privacy.info">https://c24ber.web3privacy.info</a>
+              Hacker-focused safe space where you can get productive feedback on
+              your hackathon project idea, its privacy features, and general
+              viability. The Web3 Privacy team will be available throughout the
+              weekend and will host open feedback and ideation sessions. For
+              more info please see:{" "}
+              <a href="https://c24ber.web3privacy.info">
+                https://c24ber.web3privacy.info
+              </a>
             </div>
           </div>
           <div id="party" className="mt-8">
@@ -579,7 +591,9 @@ const Experiences = () => {
                 <strong>Aeden</strong>
               </a>
             </div>
-            <div className="ml-4"><em>From 8PM onwards on Sunday night.</em></div>
+            <div className="ml-4">
+              <em>From 8PM onwards on Sunday night.</em>
+            </div>
             <div className="ml-4">
               It would not be a hackathon without an after party. It would also
               not be Berlin without a dose of techno.
