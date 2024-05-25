@@ -36,8 +36,12 @@ import puja from "../assets/people/speakers/puja.jpeg";
 import { FaTwitter } from "react-icons/fa";
 import { ImSoundcloud } from "react-icons/im";
 
-const currentDate = new Date();
+let currentDate = new Date();
 // const currentDate = new Date("2024-05-26T01:00:00+02:00");
+
+setInterval(() => {
+  currentDate = new Date();
+}, 60000);
 
 const ProgramItem = ({
   title,
@@ -861,11 +865,13 @@ const Program = () => {
                   endTime="01:00"
                   title="DJs in Courtyard 1"
                   eventLocations={[locations.yard0]}
+                  isExtravaganza
                 />
                 <div className="ml-12">
                   <ProgramItem
                     dayStr="2024-05-25"
                     startTime="17:00"
+                    isExtravaganza
                     endTime="19:00"
                     title={
                       <span className="inline-flex items-center">
@@ -895,6 +901,7 @@ const Program = () => {
                     dayStr="2024-05-25"
                     startTime="19:00"
                     endTime="21:00"
+                    isExtravaganza
                     title={
                       <span className="inline-flex items-center">
                         Anna{" "}
@@ -922,6 +929,7 @@ const Program = () => {
                     dayStr="2024-05-25"
                     startTime="21:00"
                     endTime="23:00"
+                    isExtravaganza
                     title={
                       <span className="inline-flex items-center">
                         Manu +{" "}
@@ -942,6 +950,7 @@ const Program = () => {
                     endDayStr="2024-05-26"
                     startTime="23:00"
                     endTime="01:00"
+                    isExtravaganza
                     title={
                       <span className="inline-flex items-center">
                         Manuel{" "}
@@ -961,12 +970,22 @@ const Program = () => {
               </div>
             )}
             {extravaganzaActive && (
+              <ProgramItem
+                dayStr="2024-05-25"
+                startTime="18:00"
+                endTime="23:59"
+                title="Cocktails @Cinebar"
+                eventLocations={[locations.cinebar]}
+                isExtravaganza
+              />
+            )}
+            {extravaganzaActive && (
               <>
                 <ProgramItem
                   dayStr="2024-05-25"
                   startTime="19:15"
                   endTime="01:40"
-                  endDayStr={"2024-05-26"}
+                  endDayStr="2024-05-26"
                   title="Cinema"
                   eventLocations={[locations.cinema]}
                   isExtravaganza
