@@ -869,10 +869,19 @@ const Program = () => {
                     endTime="19:00"
                     title={
                       <span className="inline-flex items-center">
-                        Jommi{" "}
+                        Jommi & Francesco{" "}
                         <a
                           href="https://twitter.com/joakimhi"
                           className="ml-2 inline-block opacity-70 hover:opacity-100 text-berlin-red hover:text-berlin-red"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <FaTwitter />
+                        </a>
+                        &
+                        <a
+                          href="https://x.com/fmelp"
+                          className="inline-block opacity-70 hover:opacity-100 text-berlin-red hover:text-berlin-red"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
