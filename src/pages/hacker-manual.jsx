@@ -681,13 +681,7 @@ const Hack = () => {
               When and where do you present in front of the Judges?
             </h4>
             <p>
-              Judging takes place on the 1st floor. There are 8 clearly marked
-              judging rooms located directly next to each other, and a room for
-              Meta Awards a bit separate, but also on the 1st floor. Volunteers
-              can help you find the way! Once the hacking phase is over and the
-              judging phase begins, you can check the Submissions Tool to find
-              out the room and time for your team's presentation. Please come to
-              the first floor 10 minutes before your scheduled time!
+              Judging takes place on the 1st floor. There are 8 clearly marked judging rooms located directly next to each other, and a room for Meta Awards a bit separate, but also on the 1st floor. Volunteers can help you find the way! Once the hacking phase is over and the judging phase begins, you can check the Submissions Tool to find out the room and time for your team's presentation. Please come to the first floor 10 minutes before your scheduled time!
             </p>
             <h4 className="text-lg mt-4 font-bold">Judging Criteria</h4>
             <h5 className="mt-4 font-bold">The 4 Track Awards</h5>
