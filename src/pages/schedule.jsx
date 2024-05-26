@@ -33,7 +33,7 @@ import nick from "../assets/people/speakers/nick.jpeg";
 import peter from "../assets/people/speakers/peter.jpeg";
 import puja from "../assets/people/speakers/puja.jpeg";
 
-import { FaTwitter } from "react-icons/fa";
+import { FaExternalLinkAlt, FaTwitter } from "react-icons/fa";
 import { ImSoundcloud } from "react-icons/im";
 
 let currentDate = new Date();
@@ -1296,6 +1296,30 @@ Then we will look at tools and techniques we can use to govern and sustain crypt
                 title="End of hackathon, doors close"
                 eventLocations={[]}
               />
+              {extravaganzaActive && (
+                <ProgramItem
+                  dayStr="2024-05-26"
+                  startTime="20:00"
+                  endTime="06:00"
+                  endDayStr={"2024-05-27"}
+                  isExtravaganza
+                  title={
+                    <span>
+                      After Party
+                      <a
+                        href="https://aedenberlin.com"
+                        target="blank"
+                        rel="noreferrer noopener"
+                        className="text-sm inline-flex items-center ml-2 text-berlin-red"
+                      >
+                        <FaExternalLinkAlt className="mr-[2px]" />{" "}
+                        <strong>Aeden</strong>
+                      </a>
+                    </span>
+                  }
+                  eventLocations={[]}
+                />
+              )}
             </ul>
           </p>
         </div>
