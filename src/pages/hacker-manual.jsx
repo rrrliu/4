@@ -681,7 +681,13 @@ const Hack = () => {
               When and where do you present in front of the Judges?
             </h4>
             <p>
-              Judging takes place on the 1st floor. There are 8 clearly marked judging rooms located directly next to each other, and a room for Meta Awards a bit separate, but also on the 1st floor. Volunteers can help you find the way! Once the hacking phase is over and the judging phase begins, you can check the Submissions Tool to find out the room and time for your team's presentation. Please come to the first floor 10 minutes before your scheduled time! 
+              Judging takes place on the 1st floor. There are 8 clearly marked
+              judging rooms located directly next to each other, and a room for
+              Meta Awards a bit separate, but also on the 1st floor. Volunteers
+              can help you find the way! Once the hacking phase is over and the
+              judging phase begins, you can check the Submissions Tool to find
+              out the room and time for your team's presentation. Please come to
+              the first floor 10 minutes before your scheduled time!
             </p>
             <h4 className="text-lg mt-4 font-bold">Judging Criteria</h4>
             <h5 className="mt-4 font-bold">The 4 Track Awards</h5>
@@ -837,15 +843,21 @@ const Hack = () => {
               after the hackathon!
             </p>
             <p>
-              Please make sure you have claimed your zero-knowledge proof on
-              Zupass (<a href="#zupass">instructions</a>) in order to be
-              eligible to vote on submissions. If you have not done so before
-              Sunday at 11:30, you may be unable to vote.
+              The link to vote is available <a href="">here</a>. To vote, please
+              select an option from the list of projects and click "Submit
+              Vote". You may filter options by typing in the "Search Options"
+              text bar at the top, and you can view the details in the
+              submission app by clicking on the "More Details" button.
             </p>
             <p>
-              The link for voting will be available on Sunday the 26th, at
-              12:00. The poll will be up for one week and will close on Monday,
-              27th of May.
+              Note that if you have not claimed your zero-knowledge proof on
+              Zupass before Sunday at 11:30, you will be unable to vote on this
+              poll. This is because we lock the group once the poll is created
+              to preserve anonymity while preventing double-voting.
+            </p>
+            <p>
+              The poll will be up for one week and will close on Monday, 3rd of
+              June.
             </p>
           </div>
           <div id="party">
